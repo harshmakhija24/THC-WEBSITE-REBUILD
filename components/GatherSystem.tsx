@@ -22,7 +22,7 @@ export default function GatherSystem() {
         { icon: MapPin, label: "3 METROS" },
       ],
       pillStyle: "bg-white/10 border-white/25 text-white font-semibold",
-      tickerBg: "bg-cobalt text-white font-extrabold",
+      tickerBg: "bg-[#2563EB] text-white font-black",
       ticker:
         "BENGALURU · HYDERABAD · DELHI NCR · CHENNAI · MUMBAI · BENGALURU · HYDERABAD · DELHI NCR · CHENNAI · MUMBAI ·",
       image: summitImg,
@@ -43,8 +43,8 @@ export default function GatherSystem() {
         { icon: Calendar, label: "MONTHLY" },
         { icon: MapPin, label: "25 SEATS" },
       ],
-      pillStyle: "bg-blue-500/25 border-blue-400/50 text-blue-100 font-semibold",
-      tickerBg: "bg-emerald-500 text-[#090D16] font-black",
+      pillStyle: "bg-blue-500/20 border-blue-400/40 text-blue-100 font-semibold",
+      tickerBg: "bg-[#10B981] text-[#090D16] font-black",
       ticker:
         "MUMBAI · PUNE · CHENNAI · HYDERABAD · DELHI · MUMBAI · PUNE · CHENNAI · HYDERABAD · DELHI ·",
       image: roundtableImg,
@@ -65,8 +65,8 @@ export default function GatherSystem() {
         { icon: Calendar, label: "BI-WEEKLY" },
         { icon: MapPin, label: "8 CHAPTERS" },
       ],
-      pillStyle: "bg-cyan-500/25 border-cyan-400/50 text-cyan-100 font-semibold",
-      tickerBg: "bg-cyan-400 text-[#090D16] font-black",
+      pillStyle: "bg-cyan-500/20 border-cyan-400/40 text-cyan-100 font-semibold",
+      tickerBg: "bg-[#06B6D4] text-[#090D16] font-black",
       ticker:
         "BENGALURU · DELHI NCR · MUMBAI · HYDERABAD · CHENNAI · PUNE · AHMEDABAD · KOLKATA ·",
       image: mixerImg,
@@ -166,13 +166,14 @@ export default function GatherSystem() {
               </div>
 
               {/* Photo Area */}
-              <div className="relative w-full h-[220px] overflow-hidden bg-slate-900">
+              <div className="relative w-full h-[220px] overflow-hidden bg-[#090D16]">
                 <Image
                   src={fmt.image}
                   alt={fmt.alt}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   sizes="(max-width: 768px) 100vw, 33vw"
+                  priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
 
