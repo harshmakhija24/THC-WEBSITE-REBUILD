@@ -1,12 +1,15 @@
 import type { NextConfig } from "next";
 
-const isGithubActions = process.env.GITHUB_ACTIONS === "true" || process.env.GITHUB_ACTIONS === "1";
+const isBuild =
+  process.argv.includes("build") ||
+  process.env.NODE_ENV === "production" ||
+  process.env.GITHUB_ACTIONS === "true";
+
 const repoName = "THC-WEBSITE-REBUILD";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: isGithubActions ? `/${repoName}` : "",
-  assetPrefix: isGithubActions ? `/${repoName}/` : undefined,
+  basePath: isBuild ? `/${repoName}` : "",
   trailingSlash: true,
   images: {
     unoptimized: true,

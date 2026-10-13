@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import thcLogo from "@/public/thc-logo.jpg";
 
 type THCLogoProps = {
   theme?: "light" | "dark";
@@ -35,7 +36,7 @@ export default function THCLogo({
         className={`${sizeClasses} relative rounded-md overflow-hidden border border-border-subtle shadow-xs bg-white shrink-0 transition-transform group-hover:scale-105`}
       >
         <Image
-          src="/thc-logo.jpg"
+          src={thcLogo}
           alt="The Healthtech Collective Logo"
           width={48}
           height={48}
