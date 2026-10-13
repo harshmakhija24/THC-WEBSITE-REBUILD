@@ -1,69 +1,102 @@
 import React from "react";
-import PulseLine from "./PulseLine";
-import { ArrowRight, Sparkles } from "lucide-react";
+import Image from "next/image";
+import PerspectiveGrid from "./PerspectiveGrid";
+import { ArrowUpRight, Sparkles, Hexagon, Calendar, MapPin } from "lucide-react";
+import summitImg from "@/public/gathering-summit.jpg";
+import roundtableImg from "@/public/gathering-roundtable.jpg";
+import mixerImg from "@/public/gathering-mixer.jpg";
 
 export default function GatherSystem() {
   const formats = [
     {
       id: "format-1",
-      cadence: "Quarterly",
-      cadencePillClass: "bg-cobalt text-white font-bold",
-      typeBadge: "Flagship",
-      title: "Clinical Validation & SaMD Summit",
-      subhead: "For AI founders, radiologists and chief medical officers.",
-      locations: "Bengaluru · Hyderabad · Delhi NCR",
-      actionLabel: "View agenda",
+      bgColor: "bg-[#0A0E18]",
+      titleStyle: "font-serif italic text-white text-[30px]",
+      title: "Clinical & SaMD Summit",
+      badgeGreen: false,
+      subhead: "Exclusive leadership dinners for healthtech founders, radiologists, and hospital chiefs.",
+      pills: [
+        { icon: Hexagon, label: "LEADERSHIP" },
+        { icon: Calendar, label: "QUARTERLY" },
+        { icon: MapPin, label: "3 METROS" },
+      ],
+      ticker:
+        "BENGALURU · HYDERABAD · DELHI NCR · CHENNAI · MUMBAI · BENGALURU · HYDERABAD · DELHI NCR · CHENNAI · MUMBAI ·",
+      image: summitImg,
+      alt: "THC Clinical Validation and SaMD Summit dinner",
+      actionLabel: "View Agenda",
       actionUrl: "https://lu.ma/thc-ai-summit-2026",
+      btnColor: "bg-white/10 hover:bg-white text-white hover:text-black border border-white/20",
     },
     {
       id: "format-2",
-      cadence: "Monthly",
-      cadencePillClass: "bg-blue-500/20 text-blue-300 border border-blue-500/30 font-bold",
-      typeBadge: "25 seats",
-      title: "Hospital CIO Roundtables",
-      subhead: "For hospital CIOs and health IT leaders.",
-      locations: "Mumbai · Pune · Chennai · Hyderabad",
-      actionLabel: "Request invite",
+      bgColor: "bg-[#451328]", // Rich Wine matching GRABCHAI reference
+      titleStyle: "font-sans font-black text-[#4ADE80] text-[27px] uppercase tracking-tight",
+      title: "HOSPITAL ROUNDTABLES",
+      badgeGreen: true,
+      subhead: "Closed-door, invite-only rooms with 25 hospital CIOs reviewing healthtech pilot adoption.",
+      pills: [
+        { icon: Hexagon, label: "HOSPITAL CHIEFS" },
+        { icon: Calendar, label: "MONTHLY" },
+        { icon: MapPin, label: "25 SEATS" },
+      ],
+      ticker:
+        "MUMBAI · PUNE · CHENNAI · HYDERABAD · DELHI · MUMBAI · PUNE · CHENNAI · HYDERABAD · DELHI ·",
+      image: roundtableImg,
+      alt: "Executive Hospital CIO and Founders Roundtable",
+      actionLabel: "Request Invite",
       actionUrl: "https://tally.so/r/thc-roundtable",
+      btnColor: "bg-[#651A3B] hover:bg-white text-white hover:text-black border border-white/20",
     },
     {
       id: "format-3",
-      cadence: "Bi-weekly",
-      cadencePillClass: "bg-blue-500/20 text-blue-300 border border-blue-500/30 font-bold",
-      typeBadge: "Open",
-      title: "Healthtech Chapter Mixers",
-      subhead: "For engineers, clinicians and early operators.",
-      locations: "8 chapters across India",
-      actionLabel: "Find your chapter",
+      bgColor: "bg-[#0C2B59]", // Deep Cobalt Navy matching BITS N ATOMS reference
+      titleStyle: "font-sans font-black text-white text-[27px] uppercase tracking-wider",
+      title: "BITS & BYTES · MIXERS",
+      badgeGreen: false,
+      subhead: "An invite-only offline mixer for engineers, clinicians, and healthtech founders across India.",
+      pills: [
+        { icon: Hexagon, label: "OPEN MIXER" },
+        { icon: Calendar, label: "BI-WEEKLY" },
+        { icon: MapPin, label: "8 CHAPTERS" },
+      ],
+      ticker:
+        "BENGALURU · DELHI NCR · MUMBAI · HYDERABAD · CHENNAI · PUNE · AHMEDABAD · KOLKATA ·",
+      image: mixerImg,
+      alt: "Healthtech Chapter community mixer crowd in Bangalore",
+      actionLabel: "Find Chapter",
       actionUrl: "https://lu.ma/thc-chapters",
+      btnColor: "bg-[#133F85] hover:bg-white text-white hover:text-black border border-white/20",
     },
   ];
 
   return (
     <section
       id="events"
-      className="bg-[#090D16] text-white py-20 md:py-28 relative overflow-hidden bg-grid-tech-dark border-y border-slate-800/80"
+      className="bg-[#F8F6F0] text-obsidian py-24 md:py-32 relative overflow-hidden border-y border-[#E2DDD2]"
     >
-      {/* High-Tech Pulse Divider at Top */}
-      <div className="absolute top-0 inset-x-0 opacity-40 pointer-events-none">
-        <PulseLine variant="divider" strokeColor="cyan" />
-      </div>
+      {/* 3D Perspective Wireframe Room Grid Background */}
+      <PerspectiveGrid
+        vanishingX={50}
+        vanishingY={32}
+        strokeColor="rgba(195, 185, 168, 0.42)"
+      />
 
       <div className="max-w-container mx-auto px-4 md:px-6 relative z-10">
-        {/* Original Section Header (Preserved) */}
+        {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
           <div className="max-w-2xl space-y-3.5">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-chip bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-[12px] font-semibold tracking-wide">
-              <Sparkles className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-chip bg-obsidian text-white text-[11px] font-bold tracking-wider uppercase shadow-xs">
+              <Sparkles className="w-3.5 h-3.5 text-yellow-400" />
               <span>The Gathering System</span>
             </div>
 
-            <h2 className="text-[32px] sm:text-[44px] font-sans font-bold text-white tracking-tight leading-tight">
+            <h2 className="text-[34px] sm:text-[46px] font-sans font-bold text-obsidian tracking-tight leading-tight">
               Where clinical validation meets{" "}
-              <span className="italic font-serif text-cyan-300 font-normal">fellowship.</span>
+              <span className="italic font-serif text-cobalt font-normal">fellowship.</span>
             </h2>
 
-            <p className="text-[16px] text-slate-300 leading-relaxed font-normal">
+            <p className="text-[16px] text-text-secondary leading-relaxed font-normal">
               Healthcare innovation requires trust that cannot be built over Zoom. We organize a
               system of high-cadence in-person rooms designed for every stage of clinical adoption.
             </p>
@@ -74,70 +107,85 @@ export default function GatherSystem() {
               href="https://lu.ma/thc-gatherings"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-400 hover:text-blue-300 font-semibold text-[15px] inline-flex items-center gap-1.5 transition-colors group"
+              className="text-cobalt hover:text-cobalt-hover font-bold text-[15px] inline-flex items-center gap-1.5 transition-colors group"
             >
               <span>See all formats</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
           </div>
         </div>
 
-        {/* 3 Clean Minimalist Cards Matching Reference Boxes */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-7">
+        {/* 3 Signature Gathering Cards Matching The Product Folks Architecture */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-7 items-stretch">
           {formats.map((fmt) => (
             <div
               key={fmt.id}
-              className="p-7 sm:p-8 rounded-2xl bg-[#0D1424] border border-slate-800/90 shadow-[0_12px_36px_-8px_rgba(0,0,0,0.6)] flex flex-col justify-between min-h-[380px] hover:border-slate-700 hover:-translate-y-1 transition-all duration-normal group"
+              className={`${fmt.bgColor} rounded-[24px] overflow-hidden border border-black/10 shadow-[0_16px_36px_-8px_rgba(0,0,0,0.18)] hover:shadow-[0_24px_48px_-12px_rgba(0,0,0,0.28)] hover:-translate-y-1.5 transition-all duration-normal flex flex-col justify-between group`}
             >
-              {/* Top Area: Dual Pills + Title + Subhead */}
-              <div className="space-y-5">
-                {/* Dual Pills Row */}
-                <div className="flex items-center gap-2 text-[12px]">
-                  <span className={`px-3 py-1 rounded-chip text-[12px] ${fmt.cadencePillClass}`}>
-                    {fmt.cadence}
-                  </span>
-                  <span className="px-3 py-1 rounded-chip bg-white/10 text-slate-300 text-[12px] font-semibold">
-                    {fmt.typeBadge}
-                  </span>
-                </div>
-
-                {/* Title in Plus Jakarta Sans */}
-                <h3 className="text-[24px] lg:text-[26px] font-sans font-bold text-white tracking-tight leading-snug group-hover:text-blue-300 transition-colors">
-                  {fmt.title}
-                </h3>
+              {/* Top Text & Badges Container */}
+              <div className="p-6 sm:p-7 space-y-4">
+                {/* Title with Custom Aesthetic Identity */}
+                <h3 className={`${fmt.titleStyle} leading-tight`}>{fmt.title}</h3>
 
                 {/* Subhead */}
-                <p className="text-[15px] text-slate-300 leading-relaxed font-normal">
+                <p className="text-[13px] text-slate-200/90 leading-relaxed font-normal min-h-[40px]">
                   {fmt.subhead}
                 </p>
+
+                {/* Pill Tags Row */}
+                <div className="flex flex-wrap items-center gap-2 pt-1">
+                  {fmt.pills.map((pill, idx) => {
+                    const Icon = pill.icon;
+                    return (
+                      <span
+                        key={idx}
+                        className="px-2.5 py-1 rounded-md bg-white/10 border border-white/15 text-white text-[11px] font-bold tracking-wider uppercase inline-flex items-center gap-1.5 backdrop-blur-xs"
+                      >
+                        <Icon className="w-3 h-3 text-white/80" />
+                        <span>{pill.label}</span>
+                      </span>
+                    );
+                  })}
+                </div>
               </div>
 
-              {/* Bottom Area: Locations + Action Link */}
-              <div className="pt-8 space-y-3">
-                <div className="text-[13px] font-mono text-slate-400 tracking-tight">
-                  {fmt.locations}
+              {/* Yellow/Amber Ticker Tape Marquee */}
+              <div className="bg-[#FCD34D] text-black text-[12px] font-black uppercase tracking-wider py-1.5 overflow-hidden whitespace-nowrap border-y border-black/15 select-none shadow-xs">
+                <div className="animate-marquee flex items-center gap-4">
+                  <span>{fmt.ticker}</span>
+                  <span>{fmt.ticker}</span>
                 </div>
+              </div>
 
-                <div>
+              {/* Photo Area */}
+              <div className="relative w-full h-[220px] overflow-hidden bg-slate-900">
+                <Image
+                  src={fmt.image}
+                  alt={fmt.alt}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+
+                {/* Bottom Action Button Overlay */}
+                <div className="absolute bottom-3 left-3 z-10">
                   <a
                     href={fmt.actionUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-400 hover:text-blue-300 font-bold text-[14px] inline-flex items-center gap-1 group/link transition-colors"
+                    className={`px-4 py-2 rounded-lg font-bold text-[13px] inline-flex items-center gap-2 transition-all shadow-md active:scale-95 ${fmt.btnColor}`}
                   >
                     <span>{fmt.actionLabel}</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform" />
+                    <div className="w-4 h-4 rounded bg-white/20 flex items-center justify-center">
+                      <ArrowUpRight className="w-3 h-3" />
+                    </div>
                   </a>
                 </div>
               </div>
             </div>
           ))}
         </div>
-      </div>
-
-      {/* High-Tech Pulse Divider at Bottom */}
-      <div className="absolute bottom-0 inset-x-0 opacity-40 pointer-events-none">
-        <PulseLine variant="divider" strokeColor="cyan" />
       </div>
     </section>
   );
