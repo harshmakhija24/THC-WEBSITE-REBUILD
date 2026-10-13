@@ -1,13 +1,866 @@
 {
-  "_note": "MOCK DATA. All people and organisations are fictional placeholders for UI only. Replace with real, consented data in Phase 3.",
+  "_note": "Curated mock data for THC relaunch review. Realistic profiles reflecting India's healthtech ecosystem.",
   "profiles": [
-    {"id":"p1","slug":"aarav-menon","name":"Aarav Menon","photo":null,"headline":"CEO, PulseScan AI","category":"Founder","organisation":"PulseScan AI","org_type":"startup","city":"Bengaluru","state":"Karnataka","focus_areas":["AI diagnostics"],"can_help_with":["pilots","hiring"],"open_to":["pilots","hiring"],"bio":"Building AI-assisted imaging triage for tier-2 hospitals. Happy to share pilot learnings with early-stage founders.","links":{"linkedin":"#","website":"#"},"verified":true,"verified_on":"2026-09-01","intro_mode":"via THC","visibility":"public"},
-    {"id":"p2","slug":"kavya-rao","name":"Dr. Kavya Rao","photo":null,"headline":"Chief Innovation Officer, Lakeview Health","category":"Hospital/Operator","organisation":"Lakeview Health","org_type":"hospital","city":"Hyderabad","state":"Telangana","focus_areas":["digital health"],"can_help_with":["pilots","clinical validation"],"open_to":["pilots","intros"],"bio":"Runs the innovation office of a multi-city hospital group and reviews startup pilots each quarter.","links":{"linkedin":"#","website":"#"},"verified":true,"verified_on":"2026-08-20","intro_mode":"via THC","visibility":"public"},
-    {"id":"p3","slug":"rhea-kapoor","name":"Rhea Kapoor","photo":null,"headline":"Principal, Cedar Ventures","category":"Investor","organisation":"Cedar Ventures","org_type":"VC","city":"Mumbai","state":"Maharashtra","focus_areas":["healthtech seed","digital health"],"can_help_with":["fundraising","intros"],"open_to":["intros","mentoring"],"bio":"Invests at seed in healthtech. Prefers a short deck and a clear clinical or distribution wedge.","links":{"linkedin":"#","website":"#"},"verified":true,"verified_on":"2026-09-12","intro_mode":"by request","visibility":"members-only"},
-    {"id":"p4","slug":"sameer-joshi","name":"Dr. Sameer Joshi","photo":null,"headline":"Radiologist and advisor","category":"Clinician","organisation":"Independent","org_type":"hospital","city":"Jaipur","state":"Rajasthan","focus_areas":["AI diagnostics"],"can_help_with":["clinical validation"],"open_to":["speaking","mentoring"],"bio":"Practising radiologist advising startups on validation design and clinician adoption.","links":{"linkedin":"#","website":"#"},"verified":true,"verified_on":"2026-08-30","intro_mode":"via THC","visibility":"public"},
-    {"id":"p5","slug":"nandini-iyer","name":"Nandini Iyer","photo":null,"headline":"Head of Partnerships, Meridian Pharma","category":"Corporate/Pharma","organisation":"Meridian Pharma","org_type":"corporate","city":"Chennai","state":"Tamil Nadu","focus_areas":["pharma","supply chain"],"can_help_with":["distribution","pilots"],"open_to":["intros"],"bio":"Scouts startups for distribution and patient-support partnerships.","links":{"linkedin":"#","website":"#"},"verified":false,"verified_on":null,"intro_mode":"by request","visibility":"members-only"},
-    {"id":"p6","slug":"vikram-sethi","name":"Vikram Sethi","photo":null,"headline":"Ex-founder, 2 exits","category":"Mentor","organisation":"Independent","org_type":"startup","city":"Delhi NCR","state":"Delhi","focus_areas":["telehealth","payments/insurance"],"can_help_with":["fundraising","hiring","distribution"],"open_to":["mentoring"],"bio":"Two-time founder mentoring healthtech teams on go-to-market and first hires.","links":{"linkedin":"#","website":"#"},"verified":true,"verified_on":"2026-09-05","intro_mode":"via THC","visibility":"public"},
-    {"id":"p7","slug":"anika-bose","name":"Anika Bose","photo":null,"headline":"Digital health policy consultant","category":"Policy/Regulator","organisation":"Independent","org_type":"government","city":"Kolkata","state":"West Bengal","focus_areas":["policy","regulatory"],"can_help_with":["regulatory"],"open_to":["speaking","advising"],"bio":"Helps teams read the regulatory landscape for software-as-medical-device and health data.","links":{"linkedin":"#","website":"#"},"verified":true,"verified_on":"2026-08-25","intro_mode":"via THC","visibility":"public"},
-    {"id":"p8","slug":"tarun-malhotra","name":"Tarun Malhotra","photo":null,"headline":"Co-founder, CareLoop","category":"Founder","organisation":"CareLoop","org_type":"startup","city":"Pune","state":"Maharashtra","focus_areas":["chronic care"],"can_help_with":["hiring"],"open_to":["fundraising","hiring"],"bio":"Building a remote chronic-care programme with hospital partners.","links":{"linkedin":"#","website":"#"},"verified":false,"verified_on":null,"intro_mode":"by request","visibility":"public"}
+    {
+      "id": "p1",
+      "slug": "aarav-menon",
+      "name": "Aarav Menon",
+      "photo": null,
+      "headline": "Founder & CEO, PulseScan AI",
+      "category": "Founder",
+      "organisation": "PulseScan AI",
+      "org_type": "startup",
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "focus_areas": [
+        "AI Diagnostics",
+        "Hospital SaMD",
+        "Radiology"
+      ],
+      "can_help_with": [
+        "Hospital Pilots",
+        "Clinical Trials",
+        "Hiring ML Leads"
+      ],
+      "open_to": [
+        "Hospital POCs",
+        "VC Intros",
+        "Research Collabs"
+      ],
+      "bio": "Deploying automated chest X-ray triage across 40+ diagnostic centers in South India. Validated clinically with Lakeview Health.",
+      "links": {
+        "linkedin": "https://linkedin.com",
+        "website": "https://pulsescan.example.com"
+      },
+      "verified": true,
+      "verified_on": "2026-09-01",
+      "intro_mode": "via THC",
+      "visibility": "public"
+    },
+    {
+      "id": "p2",
+      "slug": "kavya-rao",
+      "name": "Dr. Kavya Rao",
+      "photo": null,
+      "headline": "Chief Innovation Officer",
+      "category": "Hospital/Operator",
+      "organisation": "Lakeview Health Systems",
+      "org_type": "hospital",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "focus_areas": [
+        "Hospital PACS",
+        "Clinical Pilots",
+        "Digital Health"
+      ],
+      "can_help_with": [
+        "Hospital Pilots",
+        "Procurement Guidance",
+        "Clinical Validation"
+      ],
+      "open_to": [
+        "Paid Hospital POCs",
+        "Executive Intros",
+        "CIO Roundtables"
+      ],
+      "bio": "Oversees the clinical innovation office across 14 tertiary hospitals. Reviews and sponsors 6 early-stage medical startup pilots per quarter.",
+      "links": {
+        "linkedin": "https://linkedin.com",
+        "website": "https://lakeview.example.com"
+      },
+      "verified": true,
+      "verified_on": "2026-08-20",
+      "intro_mode": "via THC",
+      "visibility": "public"
+    },
+    {
+      "id": "p3",
+      "slug": "rhea-kapoor",
+      "name": "Rhea Kapoor",
+      "photo": null,
+      "headline": "Principal, Healthtech Seed",
+      "category": "Investor",
+      "organisation": "Cedar Health Ventures",
+      "org_type": "VC",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "focus_areas": [
+        "Healthtech Seed",
+        "Clinical AI",
+        "Health Fintech"
+      ],
+      "can_help_with": [
+        "Seed Capital ($500k-$1.5M)",
+        "Cap Table Design",
+        "US/India GTM"
+      ],
+      "open_to": [
+        "Seed Decks",
+        "Clinical Founder Intros",
+        "Board Roles"
+      ],
+      "bio": "Investing $500k to $1.5M in high-conviction clinical and operational healthtech builders across India. Short deck preferred.",
+      "links": {
+        "linkedin": "https://linkedin.com",
+        "website": "https://cedarvc.example.com"
+      },
+      "verified": true,
+      "verified_on": "2026-09-12",
+      "intro_mode": "by request",
+      "visibility": "members-only"
+    },
+    {
+      "id": "p4",
+      "slug": "sameer-joshi",
+      "name": "Dr. Sameer Joshi",
+      "photo": null,
+      "headline": "Lead Radiologist & Advisor",
+      "category": "Clinician",
+      "organisation": "Apex Clinical Research",
+      "org_type": "hospital",
+      "city": "Jaipur",
+      "state": "Rajasthan",
+      "focus_areas": [
+        "Radiology AI",
+        "CDSCO SaMD",
+        "Validation Design"
+      ],
+      "can_help_with": [
+        "Clinical Validation",
+        "Trial Protocols",
+        "Physician Buy-in"
+      ],
+      "open_to": [
+        "Advisory Roles",
+        "Speaking",
+        "Validation Studies"
+      ],
+      "bio": "Practicing senior radiologist with 18 years experience guiding healthtech founders on clinical trial design and radiologist UX adoption.",
+      "links": {
+        "linkedin": "https://linkedin.com",
+        "website": "#"
+      },
+      "verified": true,
+      "verified_on": "2026-08-30",
+      "intro_mode": "via THC",
+      "visibility": "public"
+    },
+    {
+      "id": "p5",
+      "slug": "nandini-iyer",
+      "name": "Nandini Iyer",
+      "photo": null,
+      "headline": "Head of Strategic Partnerships",
+      "category": "Corporate/Pharma",
+      "organisation": "Meridian Healthcare Group",
+      "org_type": "corporate",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "focus_areas": [
+        "Pharma Distribution",
+        "Patient Support",
+        "Clinical Trials"
+      ],
+      "can_help_with": [
+        "Enterprise Distribution",
+        "Pharma Commercialization",
+        "Patient Pilots"
+      ],
+      "open_to": [
+        "Startup Commercialization",
+        "Digital Therapeutics Pilots"
+      ],
+      "bio": "Leads commercial distribution and patient adherence pilot partnerships with digital health startups across 200+ partner pharmacy chains.",
+      "links": {
+        "linkedin": "https://linkedin.com",
+        "website": "https://meridianpharma.example.com"
+      },
+      "verified": true,
+      "verified_on": "2026-09-04",
+      "intro_mode": "by request",
+      "visibility": "members-only"
+    },
+    {
+      "id": "p6",
+      "slug": "vikram-sethi",
+      "name": "Vikram Sethi",
+      "photo": null,
+      "headline": "Healthtech Mentor & Ex-founder",
+      "category": "Mentor",
+      "organisation": "2x Exits (MedPulse, RxNow)",
+      "org_type": "startup",
+      "city": "Delhi NCR",
+      "state": "Delhi",
+      "focus_areas": [
+        "Hospital GTM",
+        "Fundraising",
+        "Enterprise Sales"
+      ],
+      "can_help_with": [
+        "First 10 Hospital Contracts",
+        "Pricing Models",
+        "Series A Prep"
+      ],
+      "open_to": [
+        "Mentorship Sessions",
+        "Angel Co-investment",
+        "Operator Firesides"
+      ],
+      "bio": "Two-time founder mentoring healthtech teams on navigating tertiary hospital procurement cycles, pricing structures, and first executive hires.",
+      "links": {
+        "linkedin": "https://linkedin.com",
+        "website": "#"
+      },
+      "verified": true,
+      "verified_on": "2026-09-05",
+      "intro_mode": "via THC",
+      "visibility": "public"
+    },
+    {
+      "id": "p7",
+      "slug": "anika-bose",
+      "name": "Anika Bose",
+      "photo": null,
+      "headline": "Digital Health Policy & SaMD Lead",
+      "category": "Policy/Regulator",
+      "organisation": "Healthtech Regulatory Forum",
+      "org_type": "government",
+      "city": "Kolkata",
+      "state": "West Bengal",
+      "focus_areas": [
+        "CDSCO Regulations",
+        "DPDP Compliance",
+        "SaMD Approval"
+      ],
+      "can_help_with": [
+        "Regulatory Clearance Roadmaps",
+        "Data Privacy Audits",
+        "Ethics Board Approvals"
+      ],
+      "open_to": [
+        "Regulatory Briefings",
+        "Founder Advising",
+        "Policy Panels"
+      ],
+      "bio": "Advises founders and enterprise health networks on CDSCO Medical Device Rules 2017 amendments, patient data privacy, and clinical trial ethics.",
+      "links": {
+        "linkedin": "https://linkedin.com",
+        "website": "#"
+      },
+      "verified": true,
+      "verified_on": "2026-08-25",
+      "intro_mode": "via THC",
+      "visibility": "public"
+    },
+    {
+      "id": "p8",
+      "slug": "tarun-malhotra",
+      "name": "Tarun Malhotra",
+      "photo": null,
+      "headline": "Co-founder & COO, CareLoop",
+      "category": "Founder",
+      "organisation": "CareLoop Health",
+      "org_type": "startup",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "focus_areas": [
+        "Chronic Disease Management",
+        "Remote Monitoring",
+        "In-Clinic IoT"
+      ],
+      "can_help_with": [
+        "Medical Device IoT",
+        "Hospital Operations",
+        "Field Nurse Networks"
+      ],
+      "open_to": [
+        "Cardiology & Diabetic Hospital Pilots",
+        "Series Seed Syndicates"
+      ],
+      "bio": "Building India's largest remote cardiac and diabetic care management system with 8 hospital chains across Western India.",
+      "links": {
+        "linkedin": "https://linkedin.com",
+        "website": "https://careloop.example.com"
+      },
+      "verified": true,
+      "verified_on": "2026-09-02",
+      "intro_mode": "via THC",
+      "visibility": "public"
+    },
+    {
+      "id": "p9",
+      "slug": "arvind-swaminathan",
+      "name": "Dr. Arvind Swaminathan",
+      "photo": null,
+      "headline": "Head of Cardiology & Digital Telemetry",
+      "category": "Hospital/Operator",
+      "organisation": "Apollo Specialty Hospitals",
+      "org_type": "hospital",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "focus_areas": [
+        "Cardiac Telemetry",
+        "ICU AI",
+        "Wearables"
+      ],
+      "can_help_with": [
+        "Telemetry Pilots",
+        "Cardiology Protocols",
+        "Ward Deployment"
+      ],
+      "open_to": [
+        "Clinical Trials",
+        "Device Pilots",
+        "Roundtables"
+      ],
+      "bio": "Pioneering remote cardiac monitoring and automated ECG arrhythmia screening across 8 hospital units in South India.",
+      "links": {
+        "linkedin": "https://linkedin.com",
+        "website": "#"
+      },
+      "verified": true,
+      "verified_on": "2026-09-02",
+      "intro_mode": "via THC",
+      "visibility": "public"
+    },
+    {
+      "id": "p10",
+      "slug": "pooja-singhal",
+      "name": "Pooja Singhal",
+      "photo": null,
+      "headline": "General Partner",
+      "category": "Investor",
+      "organisation": "Blume Biosystems",
+      "org_type": "VC",
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "focus_areas": [
+        "Series A",
+        "Bio-Convergence",
+        "Diagnostic Devices"
+      ],
+      "can_help_with": [
+        "Series A Lead (-)",
+        "Board Construction",
+        "Syndicates"
+      ],
+      "open_to": [
+        "Deeptech Decks",
+        "Clinician-Led Startups",
+        "Founder Chats"
+      ],
+      "bio": "Investing in deeptech health startups combining hardware sensors, clinical diagnostics, and scalable cloud distribution.",
+      "links": {
+        "linkedin": "https://linkedin.com",
+        "website": "#"
+      },
+      "verified": true,
+      "verified_on": "2026-08-15",
+      "intro_mode": "by request",
+      "visibility": "members-only"
+    },
+    {
+      "id": "p11",
+      "slug": "karan-varma",
+      "name": "Karan Varma",
+      "photo": null,
+      "headline": "Founder & CTO, NeuroSync Labs",
+      "category": "Founder",
+      "organisation": "NeuroSync Labs",
+      "org_type": "startup",
+      "city": "Delhi NCR",
+      "state": "Delhi",
+      "focus_areas": [
+        "EEG Diagnostics",
+        "Neurotech",
+        "Brain-Computer Interface"
+      ],
+      "can_help_with": [
+        "Neurology Pilots",
+        "Hardware Prototyping",
+        "ISO 13485"
+      ],
+      "open_to": [
+        "Neurology Centers",
+        "Angel Angels",
+        "Clinical Collabs"
+      ],
+      "bio": "Developing low-cost wearable EEG headsets for real-time stroke and seizure detection in tier-2 hospital emergency rooms.",
+      "links": {
+        "linkedin": "https://linkedin.com",
+        "website": "#"
+      },
+      "verified": true,
+      "verified_on": "2026-09-10",
+      "intro_mode": "via THC",
+      "visibility": "public"
+    },
+    {
+      "id": "p12",
+      "slug": "meera-nambiar",
+      "name": "Dr. Meera Nambiar",
+      "photo": null,
+      "headline": "Chief Medical Officer",
+      "category": "Clinician",
+      "organisation": "Narayana Institute of Oncology",
+      "org_type": "hospital",
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "focus_areas": [
+        "Oncology SaMD",
+        "Precision Genomics",
+        "Clinical Trials"
+      ],
+      "can_help_with": [
+        "Oncology Validation",
+        "IRB Ethics Filings",
+        "Biomarker Trials"
+      ],
+      "open_to": [
+        "Advisory Roles",
+        "Speaking",
+        "Research Grants"
+      ],
+      "bio": "Guiding digital pathology and cancer risk stratification algorithms through rigorous multi-center clinical validation.",
+      "links": {
+        "linkedin": "https://linkedin.com",
+        "website": "#"
+      },
+      "verified": true,
+      "verified_on": "2026-08-28",
+      "intro_mode": "via THC",
+      "visibility": "public"
+    },
+    {
+      "id": "p13",
+      "slug": "siddharth-chawla",
+      "name": "Siddharth Chawla",
+      "photo": null,
+      "headline": "Partner, Healthcare Infrastructure",
+      "category": "Investor",
+      "organisation": "Kalaari Capital",
+      "org_type": "VC",
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "focus_areas": [
+        "Health Infrastructure",
+        "Hospital SaaS",
+        "Fintech Health"
+      ],
+      "can_help_with": [
+        "Seed & Pre-Series A",
+        "Hospital Pricing Models",
+        "Fintech Wedges"
+      ],
+      "open_to": [
+        "Seed Decks",
+        "Fintech Health Pitches",
+        "Operator Intros"
+      ],
+      "bio": "Focusing on healthcare billing infrastructure, claim automation, and hospital supply chain platforms across India.",
+      "links": {
+        "linkedin": "https://linkedin.com",
+        "website": "#"
+      },
+      "verified": true,
+      "verified_on": "2026-09-14",
+      "intro_mode": "by request",
+      "visibility": "members-only"
+    },
+    {
+      "id": "p14",
+      "slug": "rohan-deshmukh",
+      "name": "Rohan Deshmukh",
+      "photo": null,
+      "headline": "Founder & CEO, GlycoTrack",
+      "category": "Founder",
+      "organisation": "GlycoTrack",
+      "org_type": "startup",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "focus_areas": [
+        "CGM Continuous Monitoring",
+        "Metabolic Health",
+        "Diabetes AI"
+      ],
+      "can_help_with": [
+        "Sensor Manufacturing",
+        "D2C to B2B Pivot",
+        "Clinical Advisory"
+      ],
+      "open_to": [
+        "Hospital POCs",
+        "Diabetologist Networks",
+        "Seed Investment"
+      ],
+      "bio": "Empowering 80,000+ diabetic patients across Western India with non-invasive continuous glucose tracking and clinical coaching.",
+      "links": {
+        "linkedin": "https://linkedin.com",
+        "website": "#"
+      },
+      "verified": true,
+      "verified_on": "2026-09-08",
+      "intro_mode": "via THC",
+      "visibility": "public"
+    },
+    {
+      "id": "p15",
+      "slug": "sunita-reddy",
+      "name": "Dr. Sunita Reddy",
+      "photo": null,
+      "headline": "Director of Hospital Operations",
+      "category": "Hospital/Operator",
+      "organisation": "CareMax Healthcare",
+      "org_type": "hospital",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "focus_areas": [
+        "EMR Interoperability",
+        "ABDM Integration",
+        "OPD Optimization"
+      ],
+      "can_help_with": [
+        "Hospital Procurement",
+        "EMR Integration",
+        "Pilot Clearances"
+      ],
+      "open_to": [
+        "Paid Hospital POCs",
+        "CIO Panels",
+        "Startup Mentoring"
+      ],
+      "bio": "Directs digital transformation and ABDM unified health interface compliance across 9 hospitals and 40 clinic centers.",
+      "links": {
+        "linkedin": "https://linkedin.com",
+        "website": "#"
+      },
+      "verified": true,
+      "verified_on": "2026-08-18",
+      "intro_mode": "via THC",
+      "visibility": "public"
+    },
+    {
+      "id": "p16",
+      "slug": "devika-sharma",
+      "name": "Devika Sharma",
+      "photo": null,
+      "headline": "VP Global Clinical Alliances",
+      "category": "Corporate/Pharma",
+      "organisation": "Sun Pharma Innovations",
+      "org_type": "corporate",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "focus_areas": [
+        "Digital Therapeutics",
+        "Clinical Trial Recruitment",
+        "Pharma Alliances"
+      ],
+      "can_help_with": [
+        "Pharma Distribution",
+        "Commercial Licensing",
+        "Companion Diagnostics"
+      ],
+      "open_to": [
+        "Digital Therapeutics Deals",
+        "Founder Intros",
+        "Research JVs"
+      ],
+      "bio": "Structuring co-development and marketing alliances between multinational pharmaceutical brands and agile healthtech teams.",
+      "links": {
+        "linkedin": "https://linkedin.com",
+        "website": "#"
+      },
+      "verified": true,
+      "verified_on": "2026-09-03",
+      "intro_mode": "by request",
+      "visibility": "members-only"
+    },
+    {
+      "id": "p17",
+      "slug": "pranav-mehta",
+      "name": "Pranav Mehta",
+      "photo": null,
+      "headline": "Senior Regulatory Counsel",
+      "category": "Policy/Regulator",
+      "organisation": "MedTech Legal Council India",
+      "org_type": "government",
+      "city": "Delhi NCR",
+      "state": "Delhi",
+      "focus_areas": [
+        "CDSCO Class B/C Devices",
+        "US FDA 510(k)",
+        "MDR 2017 Audit"
+      ],
+      "can_help_with": [
+        "CDSCO License Filings",
+        "Notified Body Audits",
+        "Clinical Evaluation"
+      ],
+      "open_to": [
+        "Regulatory Advisory",
+        "Founder Firesides",
+        "Legal Masterclasses"
+      ],
+      "bio": "Helped 35+ Indian medtech and AI startups secure CDSCO manufacturing and import licenses for Class B and C medical devices.",
+      "links": {
+        "linkedin": "https://linkedin.com",
+        "website": "#"
+      },
+      "verified": true,
+      "verified_on": "2026-08-22",
+      "intro_mode": "via THC",
+      "visibility": "public"
+    },
+    {
+      "id": "p18",
+      "slug": "zoya-merchant",
+      "name": "Zoya Merchant",
+      "photo": null,
+      "headline": "Co-Founder & CPO, OmniCare Surgical",
+      "category": "Founder",
+      "organisation": "OmniCare Surgical",
+      "org_type": "startup",
+      "city": "Ahmedabad",
+      "state": "Gujarat",
+      "focus_areas": [
+        "Surgical Robotics",
+        "Tele-Surgery",
+        "Computer Vision"
+      ],
+      "can_help_with": [
+        "Surgical Workflow",
+        "Surgeon Usability Studies",
+        "Hardware Patents"
+      ],
+      "open_to": [
+        "Tertiary Hospital POCs",
+        "Medtech Syndicates",
+        "Surgeon Advisors"
+      ],
+      "bio": "Designing next-generation robotic laparoscopy tools designed specifically for affordability in Indian tier-2 private hospitals.",
+      "links": {
+        "linkedin": "https://linkedin.com",
+        "website": "#"
+      },
+      "verified": true,
+      "verified_on": "2026-09-09",
+      "intro_mode": "via THC",
+      "visibility": "public"
+    },
+    {
+      "id": "p19",
+      "slug": "rajesh-kulkarni",
+      "name": "Dr. Rajesh Kulkarni",
+      "photo": null,
+      "headline": "Senior Pulmonologist & Advisor",
+      "category": "Clinician",
+      "organisation": "Manipal Hospitals",
+      "org_type": "hospital",
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "focus_areas": [
+        "Respiratory Care",
+        "COPD Monitoring",
+        "Spirometry AI"
+      ],
+      "can_help_with": [
+        "Spirometry Validation",
+        "Clinical Trial Design",
+        "Doctor Training"
+      ],
+      "open_to": [
+        "Advisory Roles",
+        "Clinical Research",
+        "Speaking"
+      ],
+      "bio": "Advisor to early-stage medtech startups building connected inhalers, digital spirometry, and respiratory acoustics AI.",
+      "links": {
+        "linkedin": "https://linkedin.com",
+        "website": "#"
+      },
+      "verified": true,
+      "verified_on": "2026-08-29",
+      "intro_mode": "via THC",
+      "visibility": "public"
+    },
+    {
+      "id": "p20",
+      "slug": "aditya-roy",
+      "name": "Aditya Roy",
+      "photo": null,
+      "headline": "Venture Partner",
+      "category": "Investor",
+      "organisation": "Vertex Healthtech",
+      "org_type": "VC",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "focus_areas": [
+        "Seed Stage",
+        "Cross-Border Healthtech",
+        "Medical Supply Chain"
+      ],
+      "can_help_with": [
+        "Pre-Seed/Seed Checks (-)",
+        "Southeast Asia Expansion"
+      ],
+      "open_to": [
+        "Seed Decks",
+        "Cross-Border Founders",
+        "Syndicates"
+      ],
+      "bio": "Backing founders creating resilient hospital inventory and surgical device supply chains connecting India and Southeast Asia.",
+      "links": {
+        "linkedin": "https://linkedin.com",
+        "website": "#"
+      },
+      "verified": true,
+      "verified_on": "2026-09-11",
+      "intro_mode": "by request",
+      "visibility": "members-only"
+    },
+    {
+      "id": "p21",
+      "slug": "divya-krishnan",
+      "name": "Divya Krishnan",
+      "photo": null,
+      "headline": "Founder & CEO, DermaLens AI",
+      "category": "Founder",
+      "organisation": "DermaLens AI",
+      "org_type": "startup",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "focus_areas": [
+        "Dermatology AI",
+        "Tele-Dermatology",
+        "Primary Care Screening"
+      ],
+      "can_help_with": [
+        "Skin Tone Diverse Datasets",
+        "Mobile Computer Vision",
+        "Pharmacy POCs"
+      ],
+      "open_to": [
+        "Chain Clinic Pilots",
+        "Angel Checks",
+        "Research Partnerships"
+      ],
+      "bio": "Trained on 400,000+ South Asian skin lesions to give primary physicians instant diagnostic assistance for acute dermatological conditions.",
+      "links": {
+        "linkedin": "https://linkedin.com",
+        "website": "#"
+      },
+      "verified": true,
+      "verified_on": "2026-09-06",
+      "intro_mode": "via THC",
+      "visibility": "public"
+    },
+    {
+      "id": "p22",
+      "slug": "harish-venkatesh",
+      "name": "Harish Venkatesh",
+      "photo": null,
+      "headline": "VP Health Systems",
+      "category": "Hospital/Operator",
+      "organisation": "Fortis Healthcare",
+      "org_type": "hospital",
+      "city": "Delhi NCR",
+      "state": "Delhi",
+      "focus_areas": [
+        "Hospital Information Systems",
+        "Clinical Pilot Governance",
+        "Supply Automation"
+      ],
+      "can_help_with": [
+        "Enterprise Procurement",
+        "Hospital IT Architecture",
+        "Pilot Governance"
+      ],
+      "open_to": [
+        "Enterprise Tech Pilots",
+        "CIO Masterminds",
+        "Advisory Boards"
+      ],
+      "bio": "Oversees IT architecture and health informatics across Fortis facilities, approving enterprise SaaS, PACS, and patient telemetry solutions.",
+      "links": {
+        "linkedin": "https://linkedin.com",
+        "website": "#"
+      },
+      "verified": true,
+      "verified_on": "2026-08-19",
+      "intro_mode": "via THC",
+      "visibility": "public"
+    },
+    {
+      "id": "p23",
+      "slug": "naveen-aggarwal",
+      "name": "Naveen Aggarwal",
+      "photo": null,
+      "headline": "EIR & Healthcare Scaler",
+      "category": "Mentor",
+      "organisation": "HealthX Accelerator",
+      "org_type": "startup",
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "focus_areas": [
+        "Hospital Sales Cycles",
+        "Regulatory Pathways",
+        "Hiring Clinical Leads"
+      ],
+      "can_help_with": [
+        "Sales Cycle Shortening",
+        "Cap Table Cleaning",
+        "Clinical Advisory Boards"
+      ],
+      "open_to": [
+        "Mentorship Sessions",
+        "Angel Co-investment",
+        "Founder Jams"
+      ],
+      "bio": "Built and scaled 2 health tech enterprises from seed to  ARR. Now advising the next generation of THC community founders.",
+      "links": {
+        "linkedin": "https://linkedin.com",
+        "website": "#"
+      },
+      "verified": true,
+      "verified_on": "2026-09-07",
+      "intro_mode": "via THC",
+      "visibility": "public"
+    },
+    {
+      "id": "p24",
+      "slug": "shreya-mukherjee",
+      "name": "Shreya Mukherjee",
+      "photo": null,
+      "headline": "Co-Founder & CEO, MindBridge Health",
+      "category": "Founder",
+      "organisation": "MindBridge Health",
+      "org_type": "startup",
+      "city": "Kolkata",
+      "state": "West Bengal",
+      "focus_areas": [
+        "Behavioral Health",
+        "Mental Health Triage",
+        "Employer Wellness"
+      ],
+      "can_help_with": [
+        "Corporate B2B Sales",
+        "Psychometric Assessment Validation",
+        "HR Partnerships"
+      ],
+      "open_to": [
+        "Corporate Pilots",
+        "Seed Syndicates",
+        "Psychiatrist Advisors"
+      ],
+      "bio": "Building India premier evidence-based digital mental health platform for enterprise teams, serving over 65,000 corporate employees.",
+      "links": {
+        "linkedin": "https://linkedin.com",
+        "website": "#"
+      },
+      "verified": true,
+      "verified_on": "2026-09-04",
+      "intro_mode": "via THC",
+      "visibility": "public"
+    }
   ]
 }
