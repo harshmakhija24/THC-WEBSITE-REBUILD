@@ -6,6 +6,7 @@ import ProofStrip from "@/components/ProofStrip";
 import GatherSystem from "@/components/GatherSystem";
 import DirectoryPreview from "@/components/DirectoryPreview";
 import AudienceAndSteps from "@/components/AudienceAndSteps";
+import BackgroundPattern from "@/components/BackgroundPattern";
 import {
   getNextFeaturedEvent,
   getStats,
@@ -31,8 +32,9 @@ export default async function HomePage() {
       <Header />
 
       <main className="flex-1">
-        {/* C. Hero Section: Single Live Results Card, No Grid Background, THC Design Tokens */}
+        {/* C. Hero Section: Single Live Results Card & Architectural Grid Lines */}
         <section className="relative pt-8 pb-12 md:pt-12 md:pb-16 border-b border-line bg-white overflow-hidden">
+          <BackgroundPattern variant="tech-blueprint" />
           <div className="max-w-container mx-auto px-4 md:px-6 relative z-10">
             <HeroLiveSection
               profiles={directoryProfiles}

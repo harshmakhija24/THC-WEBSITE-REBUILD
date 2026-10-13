@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import Fuse from "fuse.js";
 import { Search, ArrowRight, ArrowUpRight, CheckCircle2, Sparkles } from "lucide-react";
+import PulseLine from "./PulseLine";
 import type { DirectoryProfile, Event } from "@/lib/types";
 
 type HeroLiveSectionProps = {
@@ -134,8 +135,13 @@ export default function HeroLiveSection({ profiles, featuredEvent }: HeroLiveSec
         {/* H1: Confident bold Plus Jakarta Sans with signature cyber-rays blue gradient */}
         <h1 className="text-[38px] sm:text-[48px] lg:text-[58px] font-sans font-extrabold tracking-tight leading-[1.08] text-ink">
           Where India&apos;s healthtech{" "}
-          <span className="italic font-serif font-normal bg-gradient-to-r from-[#1E40AF] via-[#2563EB] to-[#06B6D4] bg-clip-text text-transparent inline-block">
-            connects.
+          <span className="relative inline-block">
+            <span className="italic font-serif font-normal bg-gradient-to-r from-[#1E40AF] via-[#2563EB] to-[#06B6D4] bg-clip-text text-transparent inline-block">
+              connects.
+            </span>
+            <span className="absolute -bottom-2 left-0 w-full flex justify-center pointer-events-none">
+              <PulseLine variant="accent" strokeColor="cobalt" className="w-full h-3.5 opacity-90" />
+            </span>
           </span>
         </h1>
 
