@@ -1,0 +1,26 @@
+[
+  {
+    "id": "faq-1",
+    "question": "What is The Healthtech Collective (THC)?",
+    "answer": "THC is India's largest curated healthtech community. We bring together founders, clinical leaders, hospital operators, venture investors, and policy thinkers to accelerate health innovation from research to hospital floors.",
+    "category": "General"
+  },
+  {
+    "id": "faq-2",
+    "question": "Who is eligible to join the THC community?",
+    "answer": "Membership is open to active founders, clinical innovators, hospital and diagnostic operators, medtech engineers, healthcare investors, and regulatory leaders. Applications are reviewed weekly to maintain signal and relevance.",
+    "category": "Membership"
+  },
+  {
+    "id": "faq-3",
+    "question": "How does the Directory work?",
+    "answer": "The Directory helps members find vetted peers, clinical advisors, hospital partners, and investors. Members can request an introduction directly through the platform.",
+    "category": "Directory"
+  },
+  {
+    "id": "faq-4",
+    "question": "How can our organisation partner or sponsor THC events?",
+    "answer": "We collaborate with healthcare systems, venture firms, pharmaceutical leaders, and technology partners on summits, closed roundtables, and research reports. Reach out via our Partner enquiry form.",
+    "category": "Partners"
+  }
+]

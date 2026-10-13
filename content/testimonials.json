@@ -1,0 +1,26 @@
+[
+  {
+    "id": "t-1",
+    "quote": "Through THC, we closed our first two hospital pilots in Hyderabad within three months of joining. The clinical access here is unparalleled in India.",
+    "persona": "Founder",
+    "author": "Aarav Menon",
+    "role": "CEO",
+    "company": "PulseScan AI"
+  },
+  {
+    "id": "t-2",
+    "quote": "Finding founders who understand hospital unit economics and workflow constraints is rare. THC curates high-signal builders we actually want to test.",
+    "persona": "Clinician",
+    "author": "Dr. Kavya Rao",
+    "role": "Chief Innovation Officer",
+    "company": "Lakeview Health"
+  },
+  {
+    "id": "t-3",
+    "quote": "THC is our primary source of high-quality healthtech deal flow in India. The community fosters genuine substance over hype.",
+    "persona": "Investor",
+    "author": "Rhea Kapoor",
+    "role": "Principal",
+    "company": "Cedar Ventures"
+  }
+]

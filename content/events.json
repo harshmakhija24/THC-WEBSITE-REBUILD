@@ -1,0 +1,145 @@
+[
+  {
+    "id": "ev-1",
+    "slug": "ai-diagnostics-summit-2026",
+    "title": "AI Diagnostics Summit 2026",
+    "date": "2026-11-14",
+    "time": "09:30 - 18:00 IST",
+    "city": "Bengaluru",
+    "venue": "St. John's Innovation Centre, Koramangala",
+    "format": "Summit",
+    "status": "upcoming",
+    "description": "Where clinical validation meets hospital deployment. 400 founders, radiologists, and hospital chiefs discussing real-world adoption of imaging and pathology AI.",
+    "speakers": [
+      {
+        "id": "p1",
+        "name": "Aarav Menon",
+        "role": "CEO",
+        "organisation": "PulseScan AI"
+      },
+      {
+        "id": "p2",
+        "name": "Dr. Kavya Rao",
+        "role": "Chief Innovation Officer",
+        "organisation": "Lakeview Health"
+      },
+      {
+        "id": "p4",
+        "name": "Dr. Sameer Joshi",
+        "role": "Radiologist & Advisor",
+        "organisation": "Independent"
+      }
+    ],
+    "agenda": [
+      {
+        "name": "Morning Track: Clinical Trials & Regulatory",
+        "items": [
+          {
+            "time": "10:00 - 11:15",
+            "title": "CDSCO Clearance Pathways for SaMD",
+            "description": "Navigating medical device classification and clinical trial requirements in India."
+          },
+          {
+            "time": "11:30 - 13:00",
+            "title": "From Bench to Bedside: Hospital Pilot Economics",
+            "description": "How 4 tertiary hospital networks structure paid pilot agreements."
+          }
+        ]
+      },
+      {
+        "name": "Afternoon Track: Scale & Distribution",
+        "items": [
+          {
+            "time": "14:00 - 15:30",
+            "title": "Tier-2 Diagnostic Expansion",
+            "description": "Deploying teleradiology and AI triage beyond metro clusters."
+          },
+          {
+            "time": "16:00 - 17:30",
+            "title": "The Hospital CIO Roundtable",
+            "description": "Procurement realities, PACS integration, and physician buy-in."
+          }
+        ]
+      }
+    ],
+    "sponsors": [
+      {
+        "tier": "Title",
+        "sponsors": [{ "name": "Lakeview Health Innovation Lab" }]
+      },
+      {
+        "tier": "Associate",
+        "sponsors": [{ "name": "Cedar Ventures" }, { "name": "Meridian Pharma" }]
+      }
+    ],
+    "registerUrl": "https://lu.ma/thc-ai-summit-2026",
+    "isFeatured": true
+  },
+  {
+    "id": "ev-2",
+    "slug": "hospital-pilots-roundtable-hyderabad",
+    "title": "Hospital Pilots & Procurement Roundtable",
+    "date": "2026-11-28",
+    "time": "16:00 - 19:30 IST",
+    "city": "Hyderabad",
+    "venue": "HITEC City Hub",
+    "format": "Roundtable",
+    "status": "upcoming",
+    "description": "A closed-door session for 25 founders meeting medical superintendents and procurement heads from Telangana healthcare networks.",
+    "speakers": [
+      {
+        "id": "p2",
+        "name": "Dr. Kavya Rao",
+        "role": "Chief Innovation Officer",
+        "organisation": "Lakeview Health"
+      }
+    ],
+    "registerUrl": "https://lu.ma/thc-hyd-roundtable",
+    "isFeatured": false
+  },
+  {
+    "id": "ev-3",
+    "slug": "healthtech-founders-mixer-delhi",
+    "title": "North India Healthtech Mixer",
+    "date": "2026-12-05",
+    "time": "18:00 - 21:00 IST",
+    "city": "Delhi NCR",
+    "venue": "India Habitat Centre, Lodhi Road",
+    "format": "Mixer",
+    "status": "upcoming",
+    "description": "Informal gathering for healthtech operators, medtech engineers, and digital health clinicians across Delhi, Gurgaon, and Noida.",
+    "speakers": [
+      {
+        "id": "p6",
+        "name": "Vikram Sethi",
+        "role": "Mentor & Ex-founder",
+        "organisation": "Independent"
+      }
+    ],
+    "registerUrl": "https://lu.ma/thc-delhi-mixer",
+    "isFeatured": false
+  },
+  {
+    "id": "ev-4",
+    "slug": "digital-health-investor-day-mumbai",
+    "title": "Digital Health Investor Showcase",
+    "date": "2026-09-18",
+    "time": "10:00 - 17:00 IST",
+    "city": "Mumbai",
+    "venue": "BKC Conference Centre",
+    "format": "Demo Day",
+    "status": "past",
+    "description": "12 curated seed-stage startups pitched to 30 healthcare venture funds and angel networks.",
+    "speakers": [
+      {
+        "id": "p3",
+        "name": "Rhea Kapoor",
+        "role": "Principal",
+        "organisation": "Cedar Ventures"
+      }
+    ],
+    "recap": "12 startups pitched, resulting in 18 signed term sheets and hospital POC agreements within 45 days.",
+    "registerUrl": "https://lu.ma/thc-mumbai-recap",
+    "isFeatured": false
+  }
+]

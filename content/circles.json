@@ -1,0 +1,38 @@
+[
+  {
+    "id": "c-1",
+    "slug": "ai-diagnostics-imaging",
+    "name": "AI Diagnostics & Imaging",
+    "type": "specialty",
+    "description": "Founders, radiologists, and pathologists building SaMD and clinical diagnostic algorithms.",
+    "lead": "Dr. Sameer Joshi",
+    "memberCount": 420
+  },
+  {
+    "id": "c-2",
+    "slug": "hospital-operations-pacs",
+    "name": "Hospital Tech & Operations",
+    "type": "specialty",
+    "description": "Hospital CIOs, clinical administrators, and digital health operators implementing enterprise workflows.",
+    "lead": "Dr. Kavya Rao",
+    "memberCount": 310
+  },
+  {
+    "id": "c-3",
+    "slug": "bengaluru-chapter",
+    "name": "Bengaluru Chapter",
+    "type": "city",
+    "description": "The innovation hub. Monthly roundtables across Koramangala and Indiranagar.",
+    "lead": "Aarav Menon",
+    "memberCount": 1850
+  },
+  {
+    "id": "c-4",
+    "slug": "mumbai-chapter",
+    "name": "Mumbai Chapter",
+    "type": "city",
+    "description": "Healthcare investment, corporate pharma partnerships, and enterprise health networks.",
+    "lead": "Rhea Kapoor",
+    "memberCount": 1420
+  }
+]

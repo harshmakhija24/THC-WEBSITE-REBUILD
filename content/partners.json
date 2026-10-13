@@ -1,0 +1,44 @@
+[
+  {
+    "id": "pt-1",
+    "name": "Lakeview Health Systems",
+    "logo": "/logos/lakeview.svg",
+    "tier": "Hospital",
+    "url": "https://lakeview.example.com"
+  },
+  {
+    "id": "pt-2",
+    "name": "Cedar Ventures",
+    "logo": "/logos/cedar.svg",
+    "tier": "VC",
+    "url": "https://cedarvc.example.com"
+  },
+  {
+    "id": "pt-3",
+    "name": "Meridian Pharma",
+    "logo": "/logos/meridian.svg",
+    "tier": "Strategic",
+    "url": "https://meridianpharma.example.com"
+  },
+  {
+    "id": "pt-4",
+    "name": "Apex Diagnostic Labs",
+    "logo": "/logos/apex.svg",
+    "tier": "Ecosystem",
+    "url": "https://apexlabs.example.com"
+  },
+  {
+    "id": "pt-5",
+    "name": "Novalis Health Capital",
+    "logo": "/logos/novalis.svg",
+    "tier": "VC",
+    "url": "https://novalis.example.com"
+  },
+  {
+    "id": "pt-6",
+    "name": "National Health Innovation Hub",
+    "logo": "/logos/nhih.svg",
+    "tier": "Strategic",
+    "url": "https://nhih.example.com"
+  }
+]

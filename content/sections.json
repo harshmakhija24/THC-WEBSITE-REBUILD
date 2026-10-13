@@ -1,0 +1,14 @@
+[
+  { "id": "sec-hero", "name": "Hero with Event Banner", "component": "HeroSection", "enabled": true, "order": 1 },
+  { "id": "sec-proof", "name": "Proof Strip & Stats", "component": "ProofStripSection", "enabled": true, "order": 2 },
+  { "id": "sec-whats-next", "name": "What's Next (Upcoming Events)", "component": "WhatsNextSection", "enabled": true, "order": 3 },
+  { "id": "sec-how-it-works", "name": "How THC Works (Event System)", "component": "HowItWorksSection", "enabled": true, "order": 4 },
+  { "id": "sec-directory", "name": "Directory Preview", "component": "DirectoryPreviewSection", "enabled": true, "order": 5 },
+  { "id": "sec-leaders", "name": "Leaders Under One Roof", "component": "LeadersSection", "enabled": true, "order": 6 },
+  { "id": "sec-learn", "name": "Learn & Insights", "component": "LearnSection", "enabled": true, "order": 7 },
+  { "id": "sec-jobs", "name": "Featured Healthtech Jobs", "component": "JobsSection", "enabled": true, "order": 8 },
+  { "id": "sec-circles", "name": "Circles and Chapters", "component": "CirclesSection", "enabled": true, "order": 9 },
+  { "id": "sec-testimonials", "name": "Member Testimonials", "component": "TestimonialsSection", "enabled": true, "order": 10 },
+  { "id": "sec-partner", "name": "Partner With THC", "component": "PartnerSection", "enabled": true, "order": 11 },
+  { "id": "sec-faq", "name": "Frequently Asked Questions", "component": "FaqSection", "enabled": true, "order": 12 }
+]

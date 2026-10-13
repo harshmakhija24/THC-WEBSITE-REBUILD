@@ -1,0 +1,32 @@
+[
+  {
+    "id": "stat-1",
+    "label": "Healthtech Leaders",
+    "value": "12,500+",
+    "numericValue": 12500,
+    "suffix": "+",
+    "source": "Active community roster"
+  },
+  {
+    "id": "stat-2",
+    "label": "Active Cities",
+    "value": "8",
+    "numericValue": 8,
+    "source": "Bengaluru, Mumbai, Delhi, Hyd, Chennai, Pune, Kolkata, Jaipur"
+  },
+  {
+    "id": "stat-3",
+    "label": "Gatherings Hosted",
+    "value": "64",
+    "numericValue": 64,
+    "source": "Summits, roundtables, and chapter mixers"
+  },
+  {
+    "id": "stat-4",
+    "label": "Hospital & Lab Partners",
+    "value": "45+",
+    "numericValue": 45,
+    "suffix": "+",
+    "source": "Pilot network partners"
+  }
+]

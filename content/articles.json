@@ -1,0 +1,38 @@
+[
+  {
+    "id": "art-1",
+    "slug": "navigating-cdsco-samd-approval-in-india",
+    "title": "Navigating CDSCO Approval for Medical Software in India",
+    "subtitle": "A pragmatic playbook for classification, clinical evaluation, and regulatory milestones.",
+    "category": "Insight",
+    "author": "Anika Bose",
+    "publishedAt": "2026-10-02",
+    "readingTime": "6 min read",
+    "summary": "Everything healthtech founders need to know about the Medical Devices Rules 2017 amendments and SaMD risk classifications.",
+    "tags": ["CDSCO", "Regulatory", "SaMD"]
+  },
+  {
+    "id": "art-2",
+    "slug": "lakeview-health-pulsescan-ai-pilot-case-study",
+    "title": "Case Study: Scaling Chest X-Ray AI across 14 Lakeview Hospitals",
+    "subtitle": "How Lakeview Health validated and integrated PulseScan AI into primary radiologist triage workflows.",
+    "category": "Case Study",
+    "author": "Dr. Kavya Rao & Aarav Menon",
+    "publishedAt": "2026-09-20",
+    "readingTime": "8 min read",
+    "summary": "Real metrics: 34% turnaround time reduction, 99.2% uptime, and zero disruption to routine PACS operation.",
+    "tags": ["Case Study", "Hospital Pilots", "Radiology"]
+  },
+  {
+    "id": "art-3",
+    "slug": "healthtech-glossary-what-is-samd",
+    "title": "Healthtech Glossary: Software as a Medical Device (SaMD)",
+    "subtitle": "Clear definitions for clinicians, software engineers, and founders.",
+    "category": "Glossary",
+    "author": "THC Editorial",
+    "publishedAt": "2026-09-10",
+    "readingTime": "3 min read",
+    "summary": "IMDRF and CDSCO definitions, differences between wellness software and medical diagnosis algorithms.",
+    "tags": ["Glossary", "SaMD", "Compliance"]
+  }
+]

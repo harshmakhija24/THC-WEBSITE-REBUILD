@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Crisp Modern Tech Palette (Pure White, Midnight Obsidian, Electric Cobalt, Emerald) */
+  --canvas: #FFFFFF;              /* Crisp pure white main background */
+  --canvas-subtle: #F8FAFC;       /* Clean subtle slate/zinc section tint */
+  --canvas-muted: #F1F5F9;        /* Soft gray border/input canvas */
+  
+  --obsidian: #090D16;            /* Deep Midnight Obsidian for headings & dark bands */
+  --obsidian-surface: #111827;    /* Elevated dark card surface */
+  --obsidian-border: rgba(255, 255, 255, 0.12); /* Subtle dark border */
+  
+  /* Primary Accent: Electric Cobalt Blue */
+  --cobalt: #2563EB;              /* Primary CTA fill, active focus, highlight */
+  --cobalt-hover: #1D4ED8;        /* Hover state */
+  --cobalt-tint: rgba(37, 99, 235, 0.08); /* Clean modern tint for chips & badges */
+  
+  /* Secondary Accent: Vibrant Tech Emerald (Trust / Clinical Verification) */
+  --emerald: #059669;             /* Emerald text & icons */
+  --emerald-fill: #10B981;        /* Emerald verification badges */
+  --emerald-tint: rgba(16, 185, 129, 0.1); /* Soft emerald pill background */
+  
+  /* Modern High-Tech Cyan / Pulse Accent */
+  --cyan: #06B6D4;
+  --cyan-tint: rgba(6, 182, 212, 0.1);
+  
+  /* Neutrals & Text Hierarchy */
+  --text-primary: #0F172A;        /* Slate 900: Crisp ultra-readable high-contrast text */
+  --text-secondary: #475569;      /* Slate 600: Secondary text */
+  --text-muted: #64748B;          /* Slate 500: Helper / timestamps */
+  --border-subtle: #E2E8F0;       /* Slate 200: Crisp clean 1px border */
+  --border-strong: #CBD5E1;       /* Slate 300: Focus / active border */
+
+  /* Backwards compatibility aliases mapped to new palette */
+  --ink: var(--obsidian);
+  --ink-2: var(--obsidian-surface);
+  --paper: var(--canvas);
+  --coral: var(--cobalt);
+  --coral-text: var(--cobalt);
+  --coral-tint: var(--cobalt-tint);
+  --teal: var(--emerald-fill);
+  --teal-text: var(--emerald);
+  --teal-tint: var(--emerald-tint);
+  --lilac: var(--cobalt-tint);
+  --lilac-2: #E0E7FF;
+  --slate: var(--text-secondary);
+  --line: var(--border-subtle);
+  --line-dark: var(--obsidian-border);
+
+  /* Type scale */
+  --fs-hero: 80px;
+  --fs-display: 60px;
+  --fs-h1: 40px;
+  --fs-h2: 30px;
+  --fs-h3: 22px;
+  --fs-lead: 18px;
+  --fs-body: 15px;
+  --fs-small: 13px;
+
+  /* Shapes & Shadows */
+  --radius-card: 16px;
+  --radius-chip: 9999px;
+  --radius-input: 12px;
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.05);
+  --shadow-elevated: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+
+  /* Fonts */
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif-accent: 'Newsreader', 'Georgia', serif;
+
+  /* Motion */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 150ms;
+  --dur: 250ms;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--canvas);
+  color: var(--text-primary);
+}
+
+body {
+  background-color: var(--canvas);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Accessible focus visible ring */
+:focus-visible {
+  outline: 2px solid var(--cobalt);
+  outline-offset: 2px;
+}
+
+/* Crisp Technical Grid Pattern */
+.bg-grid-tech {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+}
+
+.bg-grid-tech-dark {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+/* Marquee Animations */
+@keyframes marquee-scroll {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 30s linear infinite;
+}
+
+.animate-marquee-fast {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 18s linear infinite;
+}
+
+.animate-marquee:hover,
+.animate-marquee-fast:hover {
+  animation-play-state: paused;
+}
+
+/* Pulse SVG Draw Animation */
+@keyframes pulse-line-draw {
+  0% { stroke-dashoffset: 400; opacity: 0.3; }
+  100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+.animate-pulse-line {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 0;
+  animation: pulse-line-draw 1.6s var(--ease) forwards;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-marquee,
+  .animate-marquee-fast,
+  .animate-pulse-line {
+    animation: none !important;
+  }
+}

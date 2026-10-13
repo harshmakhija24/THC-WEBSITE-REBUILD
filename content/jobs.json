@@ -1,0 +1,44 @@
+[
+  {
+    "id": "job-1",
+    "slug": "lead-clinical-ai-engineer-pulsescan",
+    "role": "Lead Clinical AI Engineer",
+    "company": "PulseScan AI",
+    "level": "Lead",
+    "location": "Bengaluru",
+    "type": "Full-time",
+    "applyUrl": "https://pulsescan.example.com/careers/lead-ai",
+    "expiry": "2026-12-31",
+    "postedDate": "2026-10-01",
+    "isFeatured": true,
+    "tags": ["AI Diagnostics", "PyTorch", "DICOM", "Hospital PACS"]
+  },
+  {
+    "id": "job-2",
+    "slug": "hospital-partnerships-manager-careloop",
+    "role": "Hospital Partnerships Manager",
+    "company": "CareLoop",
+    "level": "Senior",
+    "location": "Mumbai / Pune",
+    "type": "Hybrid",
+    "applyUrl": "https://careloop.example.com/careers/partnerships",
+    "expiry": "2026-12-15",
+    "postedDate": "2026-10-05",
+    "isFeatured": true,
+    "tags": ["Business Development", "Tertiary Care", "Clinical Pilots"]
+  },
+  {
+    "id": "job-3",
+    "slug": "regulatory-affairs-lead-meridian",
+    "role": "Regulatory Affairs Lead (SaMD)",
+    "company": "Meridian Pharma Digital",
+    "level": "Lead",
+    "location": "Delhi NCR",
+    "type": "Full-time",
+    "applyUrl": "https://meridianpharma.example.com/careers/regulatory",
+    "expiry": "2026-11-30",
+    "postedDate": "2026-09-28",
+    "isFeatured": true,
+    "tags": ["CDSCO", "FDA 510k", "SaMD Compliance", "Clinical Trials"]
+  }
+]
