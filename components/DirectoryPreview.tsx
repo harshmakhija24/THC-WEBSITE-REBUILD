@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import PhotoSlot from "./PhotoSlot";
+import BackgroundPattern from "./BackgroundPattern";
 import { CheckCircle2, ArrowRight, Lock, MapPin, LayoutGrid, List } from "lucide-react";
 import type { DirectoryProfile } from "@/lib/types";
 
@@ -41,8 +42,11 @@ export default function DirectoryPreview({ profiles }: DirectoryPreviewProps) {
   ];
 
   return (
-    <section id="directory" className="py-18 md:py-24 bg-canvas border-b border-border-subtle">
-      <div className="max-w-container mx-auto px-4 md:px-6">
+    <section id="directory" className="py-18 md:py-24 bg-canvas-subtle border-b border-border-subtle relative overflow-hidden">
+      {/* Interconnected Clinical & Founder Network Mesh */}
+      <BackgroundPattern variant="network-mesh" />
+
+      <div className="max-w-container mx-auto px-4 md:px-6 relative z-10">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
           <div className="max-w-2xl space-y-2.5">

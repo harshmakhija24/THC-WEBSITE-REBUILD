@@ -1,4 +1,5 @@
 import React from "react";
+import BackgroundPattern from "./BackgroundPattern";
 import {
   ShieldCheck,
   Network,
@@ -59,8 +60,11 @@ export default function AudienceAndSteps() {
   ];
 
   return (
-    <section id="community" className="py-20 md:py-28 bg-canvas">
-      <div className="max-w-container mx-auto px-4 md:px-6">
+    <section id="community" className="py-20 md:py-28 bg-canvas relative overflow-hidden">
+      {/* Architectural Topography Flow Pattern */}
+      <BackgroundPattern variant="topography-flow" />
+
+      <div className="max-w-container mx-auto px-4 md:px-6 relative z-10">
         {/* Audience Strip: Who's in the room */}
         <div className="mb-20 p-8 rounded-card border border-border-subtle bg-canvas-subtle space-y-6">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-2">
@@ -179,13 +183,15 @@ export default function AudienceAndSteps() {
           })}
         </div>
 
-        {/* Final CTA Bar for this slice */}
-        <div className="mt-16 p-8 md:p-10 rounded-card bg-obsidian text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-elevated">
-          <div className="space-y-1 text-center md:text-left">
+        {/* Final CTA Bar with Cyber Rays Background Lines */}
+        <div className="mt-16 p-8 md:p-10 rounded-card bg-obsidian text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-elevated relative overflow-hidden border border-white/10">
+          <BackgroundPattern variant="cyber-rays" />
+
+          <div className="space-y-1 text-center md:text-left relative z-10">
             <div className="text-[22px] font-sans font-bold">
               Ready to meet your first hospital pilot partner?
             </div>
-            <div className="text-[14px] text-slate-400">
+            <div className="text-[14px] text-slate-300">
               Applications are reviewed weekly. Join 12,500+ leaders across India.
             </div>
           </div>
@@ -193,7 +199,7 @@ export default function AudienceAndSteps() {
             href="https://tally.so/r/thc-join"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-3.5 rounded-chip bg-cobalt text-white font-bold text-[15px] hover:bg-cobalt-hover active:scale-95 transition-all shadow-sm shrink-0 flex items-center gap-2 focus-visible:ring-2 focus-visible:ring-white"
+            className="px-8 py-3.5 rounded-chip bg-cobalt text-white font-bold text-[15px] hover:bg-cobalt-hover active:scale-95 transition-all shadow-md shrink-0 flex items-center gap-2 focus-visible:ring-2 focus-visible:ring-white relative z-10"
           >
             <span>Apply to Join THC</span>
             <ArrowRight className="w-4 h-4" />
