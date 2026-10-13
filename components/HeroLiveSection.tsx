@@ -131,10 +131,12 @@ export default function HeroLiveSection({ profiles, featuredEvent }: HeroLiveSec
           )}
         </div>
 
-        {/* H1: Confident bold Plus Jakarta Sans with signature Newsreader italic accent (No blue) */}
-        <h1 className="text-[38px] sm:text-[48px] lg:text-[58px] font-sans font-extrabold text-ink tracking-tight leading-[1.08]">
+        {/* H1: Confident bold Plus Jakarta Sans with signature cyber-rays blue gradient */}
+        <h1 className="text-[38px] sm:text-[48px] lg:text-[58px] font-sans font-extrabold tracking-tight leading-[1.08] text-ink">
           Where India&apos;s healthtech{" "}
-          <span className="italic font-serif text-ink font-normal">connects.</span>
+          <span className="italic font-serif font-normal bg-gradient-to-r from-[#1E40AF] via-[#2563EB] to-[#06B6D4] bg-clip-text text-transparent inline-block">
+            connects.
+          </span>
         </h1>
 
         {/* Subhead */}

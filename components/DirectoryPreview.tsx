@@ -544,7 +544,7 @@ export default function DirectoryPreview({
                     href="https://tally.so/r/thc-intro"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3.5 py-1.5 rounded-chip bg-gradient-to-r from-[#0B0F19] via-[#0E1E38] to-[#2563EB] text-white text-[12px] font-semibold hover:from-[#0E1626] hover:via-[#142850] hover:to-[#1D4ED8] hover:shadow-md active:scale-95 transition-all focus-visible:ring-2 flex items-center gap-1.5 shadow-xs border border-white/10"
+                    className="px-3.5 py-1.5 rounded-chip bg-gradient-to-r from-[#090D16] via-[#0E1E38] to-[#2563EB] hover:to-[#06B6D4] text-white text-[12px] font-semibold hover:shadow-md active:scale-95 transition-all focus-visible:ring-2 flex items-center gap-1.5 shadow-xs border border-white/10"
                   >
                     <span>Request Intro</span>
                     <ArrowRight className="w-3 h-3" />
@@ -614,7 +614,7 @@ export default function DirectoryPreview({
                     href="https://tally.so/r/thc-intro"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 rounded-chip bg-gradient-to-r from-[#0B0F19] via-[#0E1E38] to-[#2563EB] text-white text-[12px] font-semibold hover:from-[#0E1626] hover:via-[#142850] hover:to-[#1D4ED8] hover:shadow-md active:scale-95 transition-all flex items-center gap-1.5 shadow-xs border border-white/10"
+                    className="px-4 py-2 rounded-chip bg-gradient-to-r from-[#090D16] via-[#0E1E38] to-[#2563EB] hover:to-[#06B6D4] text-white text-[12px] font-semibold hover:shadow-md active:scale-95 transition-all flex items-center gap-1.5 shadow-xs border border-white/10"
                   >
                     <span>Request Intro</span>
                     <ArrowRight className="w-3.5 h-3.5" />
