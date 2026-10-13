@@ -44,7 +44,7 @@ export default async function HomePage() {
                 <div>
                   {featuredEvent ? (
                     <a
-                      href={featuredEvent.registration_url}
+                      href={featuredEvent.registerUrl || "#events"}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-chip bg-blue-50/90 hover:bg-blue-100/80 border border-blue-200/80 text-cobalt text-[12px] font-semibold tracking-wide transition-all group shadow-xs active:scale-95 focus-visible:ring-2 max-w-full"
