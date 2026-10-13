@@ -273,16 +273,16 @@ export default function HeroLiveSection({ profiles, featuredEvent }: HeroLiveSec
             })}
           </div>
 
-          {/* Footer: "Sample data" + "See all matches" link to /#directory?q=<query> */}
+          {/* Footer: "Sample data" + "See all matches" link to /directory?q=<query> */}
           <div className="pt-3 border-t border-line flex items-center justify-between text-[12px]">
             <span className="text-slate font-medium">Sample data</span>
-            <a
-              href={`#directory`}
+            <Link
+              href={`/directory?q=${encodeURIComponent(activeQuery)}`}
               className="text-coral-text font-bold hover:underline inline-flex items-center gap-1"
             >
               <span>See all matches</span>
               <ArrowRight className="w-3.5 h-3.5" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

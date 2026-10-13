@@ -21,13 +21,17 @@ import type { DirectoryProfile } from "@/lib/types";
 
 type DirectoryPreviewProps = {
   profiles: DirectoryProfile[];
+  initialQuery?: string;
 };
 
-export default function DirectoryPreview({ profiles }: DirectoryPreviewProps) {
+export default function DirectoryPreview({
+  profiles,
+  initialQuery = "",
+}: DirectoryPreviewProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [selectedCity, setSelectedCity] = useState<string>("All");
   const [verifiedOnly, setVerifiedOnly] = useState<boolean>(false);
-  const [searchQuery, setSearchQuery] = useState<string>("");
+  const [searchQuery, setSearchQuery] = useState<string>(initialQuery);
   const [pageSize, setPageSize] = useState<number | "all">(6);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [viewMode, setViewMode] = useState<"tiles" | "list">("tiles");
