@@ -11,7 +11,7 @@ export default function PerspectiveGrid({
   className = "",
   vanishingX = 50,
   vanishingY = 38,
-  strokeColor = "rgba(180, 170, 150, 0.45)",
+  strokeColor = "rgba(148, 163, 184, 0.28)",
 }: PerspectiveGridProps) {
   // Coordinate space: 1440 x 900
   const w = 1440;

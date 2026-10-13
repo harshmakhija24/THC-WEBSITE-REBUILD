@@ -10,76 +10,82 @@ export default function GatherSystem() {
   const formats = [
     {
       id: "format-1",
-      bgColor: "bg-[#0A0E18]",
-      titleStyle: "font-serif italic text-white text-[30px]",
-      title: "Clinical & SaMD Summit",
-      badgeGreen: false,
-      subhead: "Exclusive leadership dinners for healthtech founders, radiologists, and hospital chiefs.",
+      bgColor: "bg-[#090D16]", // THC Midnight Obsidian
+      cardBorder: "border border-slate-800 hover:border-cobalt/40",
+      titleStyle: "font-serif italic text-white text-[28px]",
+      title: "Clinical Validation & SaMD",
+      subhead:
+        "Exclusive clinical & founder leadership sessions for AI triage validation and hospital clearances.",
       pills: [
         { icon: Hexagon, label: "LEADERSHIP" },
         { icon: Calendar, label: "QUARTERLY" },
         { icon: MapPin, label: "3 METROS" },
       ],
+      pillStyle: "bg-white/10 border-white/15 text-white",
+      tickerBg: "bg-cobalt text-white",
       ticker:
         "BENGALURU · HYDERABAD · DELHI NCR · CHENNAI · MUMBAI · BENGALURU · HYDERABAD · DELHI NCR · CHENNAI · MUMBAI ·",
       image: summitImg,
       alt: "THC Clinical Validation and SaMD Summit dinner",
       actionLabel: "View Agenda",
       actionUrl: "https://lu.ma/thc-ai-summit-2026",
-      btnColor: "bg-white/10 hover:bg-white text-white hover:text-black border border-white/20",
     },
     {
       id: "format-2",
-      bgColor: "bg-[#451328]", // Rich Wine matching GRABCHAI reference
-      titleStyle: "font-sans font-black text-[#4ADE80] text-[27px] uppercase tracking-tight",
-      title: "HOSPITAL ROUNDTABLES",
-      badgeGreen: true,
-      subhead: "Closed-door, invite-only rooms with 25 hospital CIOs reviewing healthtech pilot adoption.",
+      bgColor: "bg-[#0B172E]", // THC Midnight Cobalt
+      cardBorder: "border border-blue-900/60 hover:border-blue-500/50",
+      titleStyle: "font-sans font-bold text-white text-[24px] uppercase tracking-tight",
+      title: "HOSPITAL CIO ROUNDTABLES",
+      subhead:
+        "Closed-door, invite-only rooms with 25 hospital CIOs reviewing healthtech pilot adoption.",
       pills: [
         { icon: Hexagon, label: "HOSPITAL CHIEFS" },
         { icon: Calendar, label: "MONTHLY" },
         { icon: MapPin, label: "25 SEATS" },
       ],
+      pillStyle: "bg-blue-500/20 border-blue-400/30 text-blue-200",
+      tickerBg: "bg-emerald-500 text-slate-950 font-extrabold",
       ticker:
         "MUMBAI · PUNE · CHENNAI · HYDERABAD · DELHI · MUMBAI · PUNE · CHENNAI · HYDERABAD · DELHI ·",
       image: roundtableImg,
       alt: "Executive Hospital CIO and Founders Roundtable",
       actionLabel: "Request Invite",
       actionUrl: "https://tally.so/r/thc-roundtable",
-      btnColor: "bg-[#651A3B] hover:bg-white text-white hover:text-black border border-white/20",
     },
     {
       id: "format-3",
-      bgColor: "bg-[#0C2B59]", // Deep Cobalt Navy matching BITS N ATOMS reference
-      titleStyle: "font-sans font-black text-white text-[27px] uppercase tracking-wider",
-      title: "BITS & BYTES · MIXERS",
-      badgeGreen: false,
-      subhead: "An invite-only offline mixer for engineers, clinicians, and healthtech founders across India.",
+      bgColor: "bg-[#0C1E2B]", // THC Midnight Cyan Slate
+      cardBorder: "border border-cyan-900/60 hover:border-cyan-500/50",
+      titleStyle: "font-sans font-bold text-white text-[24px] uppercase tracking-tight",
+      title: "HEALTHTECH MIXERS",
+      subhead:
+        "An invite-only offline mixer for engineers, clinicians, and healthtech founders across India.",
       pills: [
         { icon: Hexagon, label: "OPEN MIXER" },
         { icon: Calendar, label: "BI-WEEKLY" },
         { icon: MapPin, label: "8 CHAPTERS" },
       ],
+      pillStyle: "bg-cyan-500/20 border-cyan-400/30 text-cyan-200",
+      tickerBg: "bg-cyan-400 text-slate-950 font-extrabold",
       ticker:
         "BENGALURU · DELHI NCR · MUMBAI · HYDERABAD · CHENNAI · PUNE · AHMEDABAD · KOLKATA ·",
       image: mixerImg,
       alt: "Healthtech Chapter community mixer crowd in Bangalore",
       actionLabel: "Find Chapter",
       actionUrl: "https://lu.ma/thc-chapters",
-      btnColor: "bg-[#133F85] hover:bg-white text-white hover:text-black border border-white/20",
     },
   ];
 
   return (
     <section
       id="events"
-      className="bg-[#F8F6F0] text-obsidian py-24 md:py-32 relative overflow-hidden border-y border-[#E2DDD2]"
+      className="bg-[#F8FAFC] text-obsidian py-24 md:py-32 relative overflow-hidden border-y border-border-subtle"
     >
-      {/* 3D Perspective Wireframe Room Grid Background */}
+      {/* 3D Perspective Wireframe Room Grid Background in Tech Slate */}
       <PerspectiveGrid
         vanishingX={50}
         vanishingY={32}
-        strokeColor="rgba(195, 185, 168, 0.42)"
+        strokeColor="rgba(148, 163, 184, 0.28)"
       />
 
       <div className="max-w-container mx-auto px-4 md:px-6 relative z-10">
@@ -87,7 +93,7 @@ export default function GatherSystem() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
           <div className="max-w-2xl space-y-3.5">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-chip bg-obsidian text-white text-[11px] font-bold tracking-wider uppercase shadow-xs">
-              <Sparkles className="w-3.5 h-3.5 text-yellow-400" />
+              <Sparkles className="w-3.5 h-3.5 text-blue-400" />
               <span>The Gathering System</span>
             </div>
 
@@ -115,20 +121,20 @@ export default function GatherSystem() {
           </div>
         </div>
 
-        {/* 3 Signature Gathering Cards Matching The Product Folks Architecture */}
+        {/* 3 Signature Gathering Cards Harmonized with THC Modern Tech Palette */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-7 items-stretch">
           {formats.map((fmt) => (
             <div
               key={fmt.id}
-              className={`${fmt.bgColor} rounded-[24px] overflow-hidden border border-black/10 shadow-[0_16px_36px_-8px_rgba(0,0,0,0.18)] hover:shadow-[0_24px_48px_-12px_rgba(0,0,0,0.28)] hover:-translate-y-1.5 transition-all duration-normal flex flex-col justify-between group`}
+              className={`${fmt.bgColor} ${fmt.cardBorder} rounded-[24px] overflow-hidden shadow-[0_16px_36px_-8px_rgba(15,23,42,0.12)] hover:shadow-[0_24px_48px_-12px_rgba(37,99,235,0.22)] hover:-translate-y-1.5 transition-all duration-normal flex flex-col justify-between group`}
             >
               {/* Top Text & Badges Container */}
               <div className="p-6 sm:p-7 space-y-4">
-                {/* Title with Custom Aesthetic Identity */}
+                {/* Title */}
                 <h3 className={`${fmt.titleStyle} leading-tight`}>{fmt.title}</h3>
 
-                {/* Subhead */}
-                <p className="text-[13px] text-slate-200/90 leading-relaxed font-normal min-h-[40px]">
+                {/* Subhead with high legibility */}
+                <p className="text-[13.5px] text-slate-200 leading-relaxed font-normal min-h-[44px]">
                   {fmt.subhead}
                 </p>
 
@@ -139,9 +145,9 @@ export default function GatherSystem() {
                     return (
                       <span
                         key={idx}
-                        className="px-2.5 py-1 rounded-md bg-white/10 border border-white/15 text-white text-[11px] font-bold tracking-wider uppercase inline-flex items-center gap-1.5 backdrop-blur-xs"
+                        className={`px-2.5 py-1 rounded-md border text-[11px] font-bold tracking-wider uppercase inline-flex items-center gap-1.5 backdrop-blur-xs ${fmt.pillStyle}`}
                       >
-                        <Icon className="w-3 h-3 text-white/80" />
+                        <Icon className="w-3 h-3 opacity-80" />
                         <span>{pill.label}</span>
                       </span>
                     );
@@ -149,8 +155,10 @@ export default function GatherSystem() {
                 </div>
               </div>
 
-              {/* Yellow/Amber Ticker Tape Marquee */}
-              <div className="bg-[#FCD34D] text-black text-[12px] font-black uppercase tracking-wider py-1.5 overflow-hidden whitespace-nowrap border-y border-black/15 select-none shadow-xs">
+              {/* Ticker Tape Marquee */}
+              <div
+                className={`${fmt.tickerBg} text-[11px] font-black uppercase tracking-wider py-1.5 overflow-hidden whitespace-nowrap border-y border-black/10 select-none shadow-xs`}
+              >
                 <div className="animate-marquee flex items-center gap-4">
                   <span>{fmt.ticker}</span>
                   <span>{fmt.ticker}</span>
@@ -168,17 +176,17 @@ export default function GatherSystem() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
 
-                {/* Bottom Action Button Overlay */}
+                {/* Bottom Action Button */}
                 <div className="absolute bottom-3 left-3 z-10">
                   <a
                     href={fmt.actionUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`px-4 py-2 rounded-lg font-bold text-[13px] inline-flex items-center gap-2 transition-all shadow-md active:scale-95 ${fmt.btnColor}`}
+                    className="px-4 py-2 rounded-lg font-bold text-[13px] inline-flex items-center gap-2 bg-white text-obsidian hover:bg-slate-100 shadow-md active:scale-95 transition-all group/btn"
                   >
                     <span>{fmt.actionLabel}</span>
-                    <div className="w-4 h-4 rounded bg-white/20 flex items-center justify-center">
-                      <ArrowUpRight className="w-3 h-3" />
+                    <div className="w-4 h-4 rounded bg-slate-100 group-hover/btn:bg-slate-200 flex items-center justify-center transition-colors">
+                      <ArrowUpRight className="w-3 h-3 text-obsidian" />
                     </div>
                   </a>
                 </div>
