@@ -27,7 +27,7 @@ export default function HeroCollage({ profiles }: HeroCollageProps) {
           {/* Column 1: Hospital Lead + Investor */}
           <div className="space-y-3.5">
             {/* Card 1: Dr. Kavya Rao (Hospital / Operator) */}
-            <div className="bg-white rounded-card border border-border-subtle p-3.5 shadow-card hover:shadow-elevated hover:border-emerald-300 hover:-translate-y-0.5 transition-all duration-normal group">
+            <div className="bg-white rounded-card border border-border-subtle p-3.5 shadow-card hover:shadow-elevated hover:border-slate-300 hover:-translate-y-0.5 transition-all duration-normal group">
               <div className="flex items-start justify-between gap-2 mb-2">
                 <div className="flex items-center gap-2.5 min-w-0">
                   <div className="w-9 h-9 rounded-full bg-emerald-50 border border-emerald-200/80 flex items-center justify-center font-sans font-bold text-emerald-800 text-[12px] shrink-0 shadow-xs">
@@ -65,7 +65,7 @@ export default function HeroCollage({ profiles }: HeroCollageProps) {
             </div>
 
             {/* Card 3: Rhea Kapoor (Investor) */}
-            <div className="bg-white rounded-card border border-border-subtle p-3.5 shadow-card hover:shadow-elevated hover:border-purple-300 hover:-translate-y-0.5 transition-all duration-normal group">
+            <div className="bg-white rounded-card border border-border-subtle p-3.5 shadow-card hover:shadow-elevated hover:border-slate-300 hover:-translate-y-0.5 transition-all duration-normal group">
               <div className="flex items-start justify-between gap-2 mb-2">
                 <div className="flex items-center gap-2.5 min-w-0">
                   <div className="w-9 h-9 rounded-full bg-purple-50 border border-purple-200/80 flex items-center justify-center font-sans font-bold text-purple-800 text-[12px] shrink-0 shadow-xs">
@@ -105,8 +105,8 @@ export default function HeroCollage({ profiles }: HeroCollageProps) {
 
           {/* Column 2: Founder + Clinician (Offset by 16px on desktop) */}
           <div className="space-y-3.5 sm:pt-4">
-            {/* Card 2: Aarav Menon (Founder - Accent Highlighted) */}
-            <div className="bg-white rounded-card border-2 border-cobalt/40 p-3.5 shadow-card hover:shadow-elevated hover:border-cobalt hover:-translate-y-0.5 transition-all duration-normal group">
+            {/* Card 2: Aarav Menon (Founder) */}
+            <div className="bg-white rounded-card border border-border-subtle p-3.5 shadow-card hover:shadow-elevated hover:border-slate-300 hover:-translate-y-0.5 transition-all duration-normal group">
               <div className="flex items-start justify-between gap-2 mb-2">
                 <div className="flex items-center gap-2.5 min-w-0">
                   <div className="w-9 h-9 rounded-full bg-blue-50 border border-blue-200 flex items-center justify-center font-sans font-bold text-cobalt text-[12px] shrink-0 shadow-xs">
@@ -131,7 +131,7 @@ export default function HeroCollage({ profiles }: HeroCollageProps) {
                 Founder & CEO · Seed ($2.4M)
               </div>
 
-              <p className="text-[11px] text-text-secondary bg-blue-50/50 p-2 rounded-input border border-blue-100/70 mb-2 leading-relaxed">
+              <p className="text-[11px] text-text-secondary bg-canvas-subtle p-2 rounded-input border border-border-subtle/70 mb-2 leading-relaxed">
                 Chest X-ray AI in 40+ labs. Seeking North India hospital pilots.
               </p>
 
@@ -144,7 +144,7 @@ export default function HeroCollage({ profiles }: HeroCollageProps) {
             </div>
 
             {/* Card 4: Dr. Sameer Joshi (Clinician / Radiologist) */}
-            <div className="bg-white rounded-card border border-border-subtle p-3.5 shadow-card hover:shadow-elevated hover:border-cyan-300 hover:-translate-y-0.5 transition-all duration-normal group">
+            <div className="bg-white rounded-card border border-border-subtle p-3.5 shadow-card hover:shadow-elevated hover:border-slate-300 hover:-translate-y-0.5 transition-all duration-normal group">
               <div className="flex items-start justify-between gap-2 mb-2">
                 <div className="flex items-center gap-2.5 min-w-0">
                   <div className="w-9 h-9 rounded-full bg-cyan-50 border border-cyan-200/80 flex items-center justify-center font-sans font-bold text-cyan-800 text-[12px] shrink-0 shadow-xs">
