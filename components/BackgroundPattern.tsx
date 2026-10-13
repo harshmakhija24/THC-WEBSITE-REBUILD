@@ -11,17 +11,13 @@ export default function BackgroundPattern({
   className = "",
   strokeColor,
 }: BackgroundPatternProps) {
-  // 1. Tech Blueprint Grid (Hero): Clean architectural grid, subtle telemetry arcs, soft radial fade (NO PLUS SIGNS)
+  // 1. Tech Blueprint Grid (Hero): Clean architectural grid, visible telemetry arcs, and ambient glow
   if (variant === "tech-blueprint") {
-    const stroke = strokeColor || "rgba(148, 163, 184, 0.18)";
-    const majorStroke = "rgba(37, 99, 235, 0.14)";
+    const stroke = strokeColor || "rgba(148, 163, 184, 0.25)";
+    const majorStroke = "rgba(37, 99, 235, 0.22)";
     return (
       <div
         className={`absolute inset-0 pointer-events-none overflow-hidden select-none ${className}`}
-        style={{
-          maskImage: "radial-gradient(ellipse 85% 75% at 50% 35%, black 35%, transparent 95%)",
-          WebkitMaskImage: "radial-gradient(ellipse 85% 75% at 50% 35%, black 35%, transparent 95%)",
-        }}
         aria-hidden="true"
       >
         <svg
@@ -31,30 +27,31 @@ export default function BackgroundPattern({
           height="100%"
         >
           <defs>
-            {/* Minor grid 48px */}
-            <pattern id="bp-grid-minor" width="48" height="48" patternUnits="userSpaceOnUse">
+            {/* Minor grid 40px */}
+            <pattern id="bp-grid-minor" width="40" height="40" patternUnits="userSpaceOnUse">
               <path
-                d="M 48 0 L 0 0 0 48"
+                d="M 40 0 L 0 0 0 40"
                 fill="none"
                 stroke={stroke}
-                strokeWidth="0.75"
+                strokeWidth="0.8"
+                strokeOpacity="0.7"
               />
             </pattern>
 
-            {/* Major grid 144px with subtle micro-dots at intersections (NO plus signs) */}
-            <pattern id="bp-grid-major" width="144" height="144" patternUnits="userSpaceOnUse">
-              <rect width="144" height="144" fill="none" stroke={majorStroke} strokeWidth="1" />
+            {/* Major grid 120px with corner intersection micro-dots */}
+            <pattern id="bp-grid-major" width="120" height="120" patternUnits="userSpaceOnUse">
+              <rect width="120" height="120" fill="none" stroke={majorStroke} strokeWidth="1.2" />
               {/* Clean corner micro-dots at intersections */}
-              <circle cx="0" cy="0" r="1.5" fill="rgba(37, 99, 235, 0.3)" />
-              <circle cx="144" cy="0" r="1.5" fill="rgba(37, 99, 235, 0.3)" />
-              <circle cx="0" cy="144" r="1.5" fill="rgba(37, 99, 235, 0.3)" />
-              <circle cx="144" cy="144" r="1.5" fill="rgba(37, 99, 235, 0.3)" />
+              <circle cx="0" cy="0" r="2" fill="rgba(37, 99, 235, 0.45)" />
+              <circle cx="120" cy="0" r="2" fill="rgba(37, 99, 235, 0.45)" />
+              <circle cx="0" cy="120" r="2" fill="rgba(37, 99, 235, 0.45)" />
+              <circle cx="120" cy="120" r="2" fill="rgba(37, 99, 235, 0.45)" />
             </pattern>
 
             {/* Subtle radial ambient spotlight behind hero */}
-            <radialGradient id="hero-spotlight" cx="65%" cy="40%" r="60%">
-              <stop offset="0%" stopColor="#2563EB" stopOpacity="0.05" />
-              <stop offset="60%" stopColor="#06B6D4" stopOpacity="0.02" />
+            <radialGradient id="hero-spotlight" cx="65%" cy="38%" r="65%">
+              <stop offset="0%" stopColor="#2563EB" stopOpacity="0.08" />
+              <stop offset="50%" stopColor="#06B6D4" stopOpacity="0.03" />
               <stop offset="100%" stopColor="#2563EB" stopOpacity="0" />
             </radialGradient>
           </defs>
@@ -68,11 +65,15 @@ export default function BackgroundPattern({
           {/* Major Grid Layer */}
           <rect width="100%" height="100%" fill="url(#bp-grid-major)" />
 
-          {/* Elegant Architectural Telemetry Arcs (centered behind right-side roster) */}
-          <g stroke="rgba(37, 99, 235, 0.09)" strokeWidth="1" fill="none" strokeDasharray="3 6">
-            <circle cx="72%" cy="42%" r="160" />
-            <circle cx="72%" cy="42%" r="300" />
-            <circle cx="72%" cy="42%" r="460" />
+          {/* Architectural Diagonal Ray Lines */}
+          <line x1="0" y1="0" x2="100%" y2="100%" stroke={majorStroke} strokeWidth="1" strokeDasharray="4 8" strokeOpacity="0.4" />
+          <line x1="100%" y1="0" x2="0" y2="100%" stroke={majorStroke} strokeWidth="1" strokeDasharray="4 8" strokeOpacity="0.4" />
+
+          {/* Architectural Telemetry Arcs */}
+          <g stroke="rgba(37, 99, 235, 0.20)" strokeWidth="1.2" fill="none" strokeDasharray="4 6">
+            <circle cx="74%" cy="40%" r="160" />
+            <circle cx="74%" cy="40%" r="320" />
+            <circle cx="74%" cy="40%" r="480" />
           </g>
         </svg>
       </div>
