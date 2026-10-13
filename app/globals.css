@@ -33,21 +33,21 @@
   --border-subtle: #E2E8F0;       /* Slate 200: Crisp clean 1px border */
   --border-strong: #CBD5E1;       /* Slate 300: Focus / active border */
 
-  /* Backwards compatibility aliases mapped to new palette */
-  --ink: var(--obsidian);
-  --ink-2: var(--obsidian-surface);
-  --paper: var(--canvas);
-  --coral: var(--cobalt);
-  --coral-text: var(--cobalt);
-  --coral-tint: var(--cobalt-tint);
-  --teal: var(--emerald-fill);
-  --teal-text: var(--emerald);
-  --teal-tint: var(--emerald-tint);
-  --lilac: var(--cobalt-tint);
-  --lilac-2: #E0E7FF;
-  --slate: var(--text-secondary);
-  --line: var(--border-subtle);
-  --line-dark: var(--obsidian-border);
+  /* THC Design System Tokens (from thc-site-builder) */
+  --ink: #0E1424;          /* base dark, primary text */
+  --ink-2: #161F36;
+  --paper: #FFFFFF;        /* base light, page background */
+  --coral: #FF5A4F;        /* FILL ONLY: CTAs, highlights */
+  --coral-text: #C8372D;   /* coral when used as text/link on paper (4.7:1) */
+  --coral-tint: rgba(255, 90, 79, 0.1);
+  --teal: #0FA3A3;         /* FILL ONLY: verified, positive states */
+  --teal-text: #0B7A7A;    /* teal as text on paper (4.7:1) */
+  --teal-tint: rgba(15, 163, 163, 0.1);
+  --lilac: #E7E3FF;        /* soft highlight surfaces */
+  --lilac-2: #D8D2FF;
+  --slate: #5B6475;        /* secondary text on paper (5.4:1) */
+  --line: rgba(14, 20, 36, 0.12);
+  --line-dark: rgba(255, 255, 255, 0.12);
 
   /* Type scale */
   --fs-hero: 80px;

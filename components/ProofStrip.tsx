@@ -1,5 +1,6 @@
 import React from "react";
 import type { Stat, Partner } from "@/lib/types";
+import { CheckCircle2 } from "lucide-react";
 
 type ProofStripProps = {
   stats: Stat[];
@@ -12,11 +13,22 @@ export default function ProofStrip({ stats, partners }: ProofStripProps) {
   return (
     <section className="border-y border-border-subtle bg-canvas-subtle py-12 overflow-hidden">
       <div className="max-w-container mx-auto px-4 md:px-6 mb-8">
-        <div className="flex items-center justify-between gap-4 mb-6">
-          <p className="text-[12px] uppercase tracking-wider text-text-muted font-bold">
-            Trusted by Leaders Across India&apos;s Healthcare Ecosystem
-          </p>
-          <span className="text-[11px] font-mono text-text-muted bg-white border border-border-subtle px-2.5 py-0.5 rounded-chip shadow-sm">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+          <div className="flex flex-wrap items-center gap-3">
+            <p className="text-[12px] uppercase tracking-wider text-slate font-bold">
+              Trusted by Leaders Across India&apos;s Healthcare Ecosystem
+            </p>
+            {/* Moved from Hero: 100% Vetted / 680+ Leaders trust badge */}
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-chip bg-white border border-line text-[12px] font-medium text-slate shadow-xs">
+              <CheckCircle2 className="w-3.5 h-3.5 text-teal" />
+              <span>
+                <strong className="text-ink">100% Vetted:</strong> Clinical, hospital, and investor credentials verified
+              </span>
+              <span className="text-line">|</span>
+              <span className="font-bold text-ink">680+ Leaders</span>
+            </div>
+          </div>
+          <span className="text-[11px] text-slate bg-white border border-border-subtle px-2.5 py-0.5 rounded-chip shadow-xs self-start md:self-auto">
             Sample data
           </span>
         </div>
