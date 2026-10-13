@@ -31,15 +31,14 @@ export default function PhotoSlot({
   };
 
   const tintClasses = {
-    cobalt: "bg-gradient-to-br from-blue-50 to-indigo-100/70 text-cobalt border-blue-200/80",
-    emerald: "bg-gradient-to-br from-emerald-50 to-teal-100/70 text-emerald-800 border-emerald-200/80",
-    purple: "bg-gradient-to-br from-purple-50 to-indigo-100/70 text-purple-800 border-purple-200/80",
-    slate: "bg-gradient-to-br from-slate-100 to-slate-200/80 text-slate-800 border-slate-300/80",
-    dark: "bg-obsidian text-white border-obsidian-border",
-    // aliases for backward compatibility
-    lilac: "bg-gradient-to-br from-blue-50 to-indigo-100/70 text-cobalt border-blue-200/80",
-    teal: "bg-gradient-to-br from-emerald-50 to-teal-100/70 text-emerald-800 border-emerald-200/80",
-    coral: "bg-gradient-to-br from-cyan-50 to-blue-100/70 text-cyan-900 border-cyan-200/80",
+    cobalt: "bg-lilac text-ink border-line",
+    emerald: "bg-teal/15 text-teal-text border-teal/25",
+    purple: "bg-lilac text-ink border-line",
+    slate: "bg-paper text-slate border-line",
+    dark: "bg-ink text-paper border-ink",
+    lilac: "bg-lilac text-ink border-line",
+    teal: "bg-teal/15 text-teal-text border-teal/25",
+    coral: "bg-coral/15 text-coral-text border-coral/25",
   };
 
   if (photo) {
