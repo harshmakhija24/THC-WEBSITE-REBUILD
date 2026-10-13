@@ -11,12 +11,17 @@ export default function BackgroundPattern({
   className = "",
   strokeColor,
 }: BackgroundPatternProps) {
-  // 1. Tech Blueprint Grid (Hero): Coordinate crosshairs, subtle measurements & precision ticks
+  // 1. Tech Blueprint Grid (Hero): Clean architectural grid, subtle telemetry arcs, soft radial fade (NO PLUS SIGNS)
   if (variant === "tech-blueprint") {
-    const stroke = strokeColor || "rgba(148, 163, 184, 0.24)";
+    const stroke = strokeColor || "rgba(148, 163, 184, 0.18)";
+    const majorStroke = "rgba(37, 99, 235, 0.14)";
     return (
       <div
         className={`absolute inset-0 pointer-events-none overflow-hidden select-none ${className}`}
+        style={{
+          maskImage: "radial-gradient(ellipse 85% 75% at 50% 35%, black 35%, transparent 95%)",
+          WebkitMaskImage: "radial-gradient(ellipse 85% 75% at 50% 35%, black 35%, transparent 95%)",
+        }}
         aria-hidden="true"
       >
         <svg
@@ -26,36 +31,30 @@ export default function BackgroundPattern({
           height="100%"
         >
           <defs>
-            {/* Minor grid 24px */}
-            <pattern id="bp-grid-minor" width="24" height="24" patternUnits="userSpaceOnUse">
+            {/* Minor grid 48px */}
+            <pattern id="bp-grid-minor" width="48" height="48" patternUnits="userSpaceOnUse">
               <path
-                d="M 24 0 L 0 0 0 24"
+                d="M 48 0 L 0 0 0 48"
                 fill="none"
                 stroke={stroke}
-                strokeWidth="0.6"
-                strokeOpacity="0.5"
+                strokeWidth="0.75"
               />
             </pattern>
 
-            {/* Major grid 96px with crosshair markers */}
-            <pattern id="bp-grid-major" width="96" height="96" patternUnits="userSpaceOnUse">
-              <rect width="96" height="96" fill="none" stroke={stroke} strokeWidth="1" />
-              {/* Center Crosshair + */}
-              <path
-                d="M 48 42 L 48 54 M 42 48 L 54 48"
-                stroke="rgba(37, 99, 235, 0.35)"
-                strokeWidth="1.2"
-              />
-              {/* Corner tick marks */}
-              <circle cx="0" cy="0" r="1.5" fill="rgba(37, 99, 235, 0.4)" />
-              <circle cx="96" cy="0" r="1.5" fill="rgba(37, 99, 235, 0.4)" />
-              <circle cx="0" cy="96" r="1.5" fill="rgba(37, 99, 235, 0.4)" />
-              <circle cx="96" cy="96" r="1.5" fill="rgba(37, 99, 235, 0.4)" />
+            {/* Major grid 144px with subtle micro-dots at intersections (NO plus signs) */}
+            <pattern id="bp-grid-major" width="144" height="144" patternUnits="userSpaceOnUse">
+              <rect width="144" height="144" fill="none" stroke={majorStroke} strokeWidth="1" />
+              {/* Clean corner micro-dots at intersections */}
+              <circle cx="0" cy="0" r="1.5" fill="rgba(37, 99, 235, 0.3)" />
+              <circle cx="144" cy="0" r="1.5" fill="rgba(37, 99, 235, 0.3)" />
+              <circle cx="0" cy="144" r="1.5" fill="rgba(37, 99, 235, 0.3)" />
+              <circle cx="144" cy="144" r="1.5" fill="rgba(37, 99, 235, 0.3)" />
             </pattern>
 
-            {/* Subtle radial ambient spotlight on top-right */}
-            <radialGradient id="hero-spotlight" cx="70%" cy="35%" r="55%">
-              <stop offset="0%" stopColor="#2563EB" stopOpacity="0.06" />
+            {/* Subtle radial ambient spotlight behind hero */}
+            <radialGradient id="hero-spotlight" cx="65%" cy="40%" r="60%">
+              <stop offset="0%" stopColor="#2563EB" stopOpacity="0.05" />
+              <stop offset="60%" stopColor="#06B6D4" stopOpacity="0.02" />
               <stop offset="100%" stopColor="#2563EB" stopOpacity="0" />
             </radialGradient>
           </defs>
@@ -69,9 +68,12 @@ export default function BackgroundPattern({
           {/* Major Grid Layer */}
           <rect width="100%" height="100%" fill="url(#bp-grid-major)" />
 
-          {/* Faint Architectural Diagonal Rays */}
-          <line x1="0" y1="0" x2="100%" y2="100%" stroke={stroke} strokeWidth="0.8" strokeDasharray="4 8" strokeOpacity="0.4" />
-          <line x1="100%" y1="0" x2="0" y2="100%" stroke={stroke} strokeWidth="0.8" strokeDasharray="4 8" strokeOpacity="0.4" />
+          {/* Elegant Architectural Telemetry Arcs (centered behind right-side roster) */}
+          <g stroke="rgba(37, 99, 235, 0.09)" strokeWidth="1" fill="none" strokeDasharray="3 6">
+            <circle cx="72%" cy="42%" r="160" />
+            <circle cx="72%" cy="42%" r="300" />
+            <circle cx="72%" cy="42%" r="460" />
+          </g>
         </svg>
       </div>
     );
@@ -140,10 +142,14 @@ export default function BackgroundPattern({
 
   // 3. Network Mesh (Directory): Interconnected node lattice representing India's healthtech ecosystem
   if (variant === "network-mesh") {
-    const stroke = strokeColor || "rgba(148, 163, 184, 0.22)";
+    const stroke = strokeColor || "rgba(148, 163, 184, 0.20)";
     return (
       <div
         className={`absolute inset-0 pointer-events-none overflow-hidden select-none ${className}`}
+        style={{
+          maskImage: "radial-gradient(ellipse 90% 85% at 50% 45%, black 40%, transparent 95%)",
+          WebkitMaskImage: "radial-gradient(ellipse 90% 85% at 50% 45%, black 40%, transparent 95%)",
+        }}
         aria-hidden="true"
       >
         <svg
@@ -211,10 +217,14 @@ export default function BackgroundPattern({
 
   // 4. Topography / Flow Trajectory (Audience & Steps): Subtle architectural contour waves
   if (variant === "topography-flow") {
-    const stroke = strokeColor || "rgba(148, 163, 184, 0.25)";
+    const stroke = strokeColor || "rgba(148, 163, 184, 0.20)";
     return (
       <div
         className={`absolute inset-0 pointer-events-none overflow-hidden select-none ${className}`}
+        style={{
+          maskImage: "radial-gradient(ellipse 90% 80% at 50% 50%, black 40%, transparent 95%)",
+          WebkitMaskImage: "radial-gradient(ellipse 90% 80% at 50% 50%, black 40%, transparent 95%)",
+        }}
         aria-hidden="true"
       >
         <svg
