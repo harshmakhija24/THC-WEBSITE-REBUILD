@@ -65,12 +65,12 @@ export default function JoinClient({ testimonials }: JoinClientProps) {
   return (
     <div className="bg-canvas text-text-primary selection:bg-cobalt-tint selection:text-cobalt">
       {/* 1. Announcement Pill Bar */}
-      <div className="bg-gradient-to-r from-[#090D16] via-[#0E1E38] to-[#1E3A8A] text-white py-2.5 px-4 text-[12.5px] border-b border-border-subtle/20">
-        <div className="max-w-container mx-auto flex items-center justify-between gap-3 flex-wrap">
+      <div className="bg-gradient-to-r from-[#090D16] via-[#0E1E38] to-[#1E3A8A] text-white py-2.5 px-4 text-[12px] sm:text-[12.5px] border-b border-border-subtle/20">
+        <div className="max-w-container mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
             <span className="font-semibold text-white tracking-wide">
-              Limited Period Opportunity:
+              Limited Period:
             </span>
             <span className="text-slate-200">
               THC WhatsApp Community is currently <strong className="text-emerald-300">Free to Join</strong> for active builders & clinicians.
@@ -80,7 +80,7 @@ export default function JoinClient({ testimonials }: JoinClientProps) {
             href="https://chat.whatsapp.com/invite/thc-healthtech"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-cyan hover:text-white font-bold inline-flex items-center gap-1 transition-colors text-[12px] underline underline-offset-2 shrink-0"
+            className="text-cyan hover:text-white font-bold inline-flex items-center gap-1 transition-colors text-[11.5px] sm:text-[12px] underline underline-offset-2 shrink-0 self-start sm:self-auto"
           >
             <span>Claim Free WhatsApp Access</span>
             <ArrowRight className="w-3.5 h-3.5" />
@@ -89,19 +89,19 @@ export default function JoinClient({ testimonials }: JoinClientProps) {
       </div>
 
       {/* 2. Hero Section */}
-      <section className="relative pt-10 pb-14 sm:pt-14 sm:pb-20 border-b border-line bg-white overflow-hidden">
+      <section className="relative pt-8 pb-12 sm:pt-14 sm:pb-20 border-b border-line bg-white overflow-hidden">
         <BackgroundPattern variant="tech-blueprint" />
 
         <div className="max-w-container mx-auto px-4 md:px-6 relative z-10">
-          <div className="max-w-3xl space-y-4">
+          <div className="max-w-3xl space-y-3.5 sm:space-y-4">
             {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-chip bg-lilac/70 border border-line text-ink text-[12px] font-bold tracking-wide shadow-xs">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-chip bg-lilac/70 border border-line text-ink text-[11.5px] sm:text-[12px] font-bold tracking-wide shadow-xs">
               <Sparkles className="w-3.5 h-3.5 text-cobalt" />
               <span>Membership Pathways · 2026 Admissions</span>
             </div>
 
             {/* Title */}
-            <h1 className="text-[34px] sm:text-[48px] lg:text-[58px] font-sans font-extrabold tracking-tight leading-[1.1] text-[#1B225E]">
+            <h1 className="text-[30px] sm:text-[44px] lg:text-[58px] font-sans font-extrabold tracking-tight leading-[1.12] sm:leading-[1.1] text-[#1B225E]">
               Where India&apos;s healthtech builders{" "}
               <span className="relative inline-block">
                 <span className="italic font-serif font-normal bg-gradient-to-r from-[#1E40AF] via-[#2563EB] to-[#06B6D4] bg-clip-text text-transparent inline-block">
@@ -114,23 +114,23 @@ export default function JoinClient({ testimonials }: JoinClientProps) {
             </h1>
 
             {/* Subhead */}
-            <p className="text-[15px] sm:text-[17px] text-slate leading-relaxed">
+            <p className="text-[14.5px] sm:text-[17px] text-slate leading-relaxed">
               From our open, high-signal WhatsApp community to vetted founder cohorts and closed-door hospital CIO roundtables. Choose the pathway that matches where you are in your clinical journey.
             </p>
 
             {/* Quick Proof Metrics */}
-            <div className="pt-2 flex items-center gap-3 sm:gap-4 flex-wrap text-[12px] sm:text-[13px] font-medium text-slate">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-chip bg-canvas-subtle border border-line">
+            <div className="pt-1.5 flex items-center gap-2 sm:gap-4 flex-wrap text-[11.5px] sm:text-[13px] font-medium text-slate">
+              <div className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-chip bg-canvas-subtle border border-line">
                 <CheckCircle2 className="w-3.5 h-3.5 text-teal" />
                 <span><strong className="text-ink">12,500+</strong> Leaders</span>
               </div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-chip bg-canvas-subtle border border-line">
+              <div className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-chip bg-canvas-subtle border border-line">
                 <CheckCircle2 className="w-3.5 h-3.5 text-teal" />
                 <span><strong className="text-ink">14</strong> Metro Chapters</span>
               </div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-chip bg-canvas-subtle border border-line">
+              <div className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-chip bg-canvas-subtle border border-line">
                 <CheckCircle2 className="w-3.5 h-3.5 text-teal" />
-                <span><strong className="text-ink">40+</strong> Hospital Innovation Clearances</span>
+                <span><strong className="text-ink">40+</strong> Hospital Clearances</span>
               </div>
             </div>
           </div>
@@ -138,49 +138,49 @@ export default function JoinClient({ testimonials }: JoinClientProps) {
       </section>
 
       {/* 3. 🔥 Featured Highlight: Instant Free Access to WhatsApp Community */}
-      <section className="py-12 sm:py-16 bg-gradient-to-b from-[#F0FDF4] to-canvas border-b border-emerald-100 relative overflow-hidden">
+      <section className="py-10 sm:py-16 bg-gradient-to-b from-[#F0FDF4] to-canvas border-b border-emerald-100 relative overflow-hidden">
         <div className="max-w-container mx-auto px-4 md:px-6 relative z-10">
-          <div className="p-6 sm:p-10 rounded-[24px] border-2 border-emerald-500/30 bg-white shadow-elevated relative overflow-hidden">
+          <div className="p-5 sm:p-10 rounded-[20px] sm:rounded-[24px] border-2 border-emerald-500/30 bg-white shadow-elevated relative overflow-hidden">
             {/* Emerald glow accent */}
             <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-100/50 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20" />
 
-            <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+            <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 lg:gap-8">
               {/* Left Column: Details */}
-              <div className="space-y-4 max-w-2xl">
+              <div className="space-y-3.5 sm:space-y-4 max-w-2xl">
                 <div className="flex items-center gap-2 flex-wrap">
-                  <span className="px-3 py-1 rounded-chip bg-emerald-100 text-emerald-800 text-[11px] font-extrabold uppercase tracking-wider inline-flex items-center gap-1.5">
+                  <span className="px-3 py-1 rounded-chip bg-emerald-100 text-emerald-800 text-[10.5px] sm:text-[11px] font-extrabold uppercase tracking-wider inline-flex items-center gap-1.5">
                     <Flame className="w-3.5 h-3.5 text-emerald-600" />
                     <span>Free Community Intake · Open Now</span>
                   </span>
-                  <span className="px-2.5 py-0.5 rounded-chip bg-slate-100 text-slate text-[11.5px] font-bold">
+                  <span className="px-2.5 py-0.5 rounded-chip bg-slate-100 text-slate text-[11px] sm:text-[11.5px] font-bold">
                     8,400+ Active Members
                   </span>
                 </div>
 
                 <div>
-                  <h2 className="text-[26px] sm:text-[34px] font-sans font-extrabold text-obsidian tracking-tight leading-tight">
+                  <h2 className="text-[24px] sm:text-[34px] font-sans font-extrabold text-obsidian tracking-tight leading-tight">
                     The THC WhatsApp Community
                   </h2>
-                  <p className="text-[14.5px] sm:text-[15.5px] text-slate mt-1.5 leading-relaxed">
+                  <p className="text-[13.5px] sm:text-[15.5px] text-slate mt-1.5 leading-relaxed">
                     Skip long admission cycles. Step directly into India&apos;s largest curated WhatsApp community for healthtech builders, practicing doctors, hospital executives, and angel investors. Zero spam, 100% signal.
                   </p>
                 </div>
 
                 {/* 4 Feature Points */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                  <div className="flex items-start gap-2.5 text-[13px] text-text-primary">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 pt-1 sm:pt-2">
+                  <div className="flex items-start gap-2 text-[12.5px] sm:text-[13px] text-text-primary">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                     <span><strong>Daily High-Signal Queries:</strong> Fast answers on CDSCO, PACS, and clinical trial partners.</span>
                   </div>
-                  <div className="flex items-start gap-2.5 text-[13px] text-text-primary">
+                  <div className="flex items-start gap-2 text-[12.5px] sm:text-[13px] text-text-primary">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                     <span><strong>Weekly Virtual AMAs:</strong> Live audio & video rooms with Series A/B founders & hospital CIOs.</span>
                   </div>
-                  <div className="flex items-start gap-2.5 text-[13px] text-text-primary">
+                  <div className="flex items-start gap-2 text-[12.5px] sm:text-[13px] text-text-primary">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                     <span><strong>City Chapter Alerts:</strong> First access to local offline meetups in 8 Indian metros.</span>
                   </div>
-                  <div className="flex items-start gap-2.5 text-[13px] text-text-primary">
+                  <div className="flex items-start gap-2 text-[12.5px] sm:text-[13px] text-text-primary">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                     <span><strong>Doctor & Founder Matchmaking:</strong> Connect directly with practicing clinical advisors.</span>
                   </div>
@@ -188,16 +188,16 @@ export default function JoinClient({ testimonials }: JoinClientProps) {
               </div>
 
               {/* Right Column: Prominent Action Box */}
-              <div className="shrink-0 lg:w-80 p-6 rounded-[20px] bg-gradient-to-b from-[#090D16] to-[#0D1F38] text-white space-y-4 shadow-card text-center border border-white/10">
+              <div className="w-full lg:w-80 p-5 sm:p-6 rounded-[18px] sm:rounded-[20px] bg-gradient-to-b from-[#090D16] to-[#0D1F38] text-white space-y-3.5 sm:space-y-4 shadow-card text-center border border-white/10 shrink-0">
                 <div className="space-y-1">
-                  <div className="text-[11px] uppercase tracking-wider text-emerald-400 font-extrabold">
+                  <div className="text-[10.5px] sm:text-[11px] uppercase tracking-wider text-emerald-400 font-extrabold">
                     Community Tier
                   </div>
-                  <div className="text-[34px] font-sans font-extrabold text-white tracking-tight flex items-center justify-center gap-1.5">
+                  <div className="text-[30px] sm:text-[34px] font-sans font-extrabold text-white tracking-tight flex items-center justify-center gap-1.5">
                     <span>₹0</span>
-                    <span className="text-[13px] font-medium text-slate-400">/ Free</span>
+                    <span className="text-[12.5px] sm:text-[13px] font-medium text-slate-400">/ Free</span>
                   </div>
-                  <div className="text-[12px] text-emerald-300 font-medium">
+                  <div className="text-[11.5px] sm:text-[12px] text-emerald-300 font-medium">
                     Instant access via WhatsApp
                   </div>
                 </div>
@@ -206,13 +206,13 @@ export default function JoinClient({ testimonials }: JoinClientProps) {
                   href="https://chat.whatsapp.com/invite/thc-healthtech"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3.5 px-5 rounded-chip bg-[#25D366] hover:bg-[#20BD5A] text-obsidian font-extrabold text-[14.5px] transition-all shadow-md active:scale-95 flex items-center justify-center gap-2 group"
+                  className="w-full py-3 sm:py-3.5 px-5 rounded-chip bg-[#25D366] hover:bg-[#20BD5A] text-obsidian font-extrabold text-[14px] sm:text-[14.5px] transition-all shadow-md active:scale-95 flex items-center justify-center gap-2 group"
                 >
-                  <MessageCircle className="w-5 h-5 fill-current" />
+                  <MessageCircle className="w-4.5 h-4.5 sm:w-5 sm:h-5 fill-current" />
                   <span>Join WhatsApp Community</span>
                 </a>
 
-                <p className="text-[11px] text-slate-400 leading-snug">
+                <p className="text-[10.5px] sm:text-[11px] text-slate-400 leading-snug">
                   Immediate invitation link · Moderated for builders & clinicians · No credit card required
                 </p>
               </div>
