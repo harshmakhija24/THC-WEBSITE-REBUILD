@@ -133,7 +133,7 @@ export default function HeroLiveSection({ profiles, featuredEvent }: HeroLiveSec
         </div>
 
         {/* H1: 'Where India's healthtech' in deep dark purple-blue, 'connects.' in signature radiant gradient with pulse line */}
-        <h1 className="text-[38px] sm:text-[48px] lg:text-[58px] font-sans font-extrabold tracking-tight leading-[1.08] text-[#1B225E]">
+        <h1 className="text-[32px] sm:text-[46px] lg:text-[58px] font-sans font-extrabold tracking-tight leading-[1.12] sm:leading-[1.08] text-[#1B225E]">
           Where India&apos;s healthtech{" "}
           <span className="relative inline-block">
             <span className="italic font-serif font-normal bg-gradient-to-r from-[#1E40AF] via-[#2563EB] to-[#06B6D4] bg-clip-text text-transparent inline-block">
@@ -146,7 +146,7 @@ export default function HeroLiveSection({ profiles, featuredEvent }: HeroLiveSec
         </h1>
 
         {/* Subhead */}
-        <p className="text-[15px] sm:text-[16px] text-slate max-w-xl leading-relaxed">
+        <p className="text-[14.5px] sm:text-[16px] text-slate max-w-xl leading-relaxed">
           The front door to India&apos;s healthtech ecosystem. Find and reach verified
           hospital chiefs, seed healthtech investors, clinical advisors, and founders within
           three clicks.
@@ -155,21 +155,21 @@ export default function HeroLiveSection({ profiles, featuredEvent }: HeroLiveSec
         {/* Search Bar + 4 Popular Chips */}
         <div className="pt-0.5 space-y-3">
           <form onSubmit={handleSearchSubmit} className="relative flex items-center shadow-card rounded-chip group max-w-xl">
-            <div className="absolute left-4.5 text-slate group-focus-within:text-ink transition-colors pointer-events-none">
-              <Search className="w-4.5 h-4.5" />
+            <div className="absolute left-3.5 sm:left-4.5 text-slate group-focus-within:text-ink transition-colors pointer-events-none">
+              <Search className="w-4 h-4 sm:w-4.5 sm:h-4.5" />
             </div>
             <input
               type="search"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
-              placeholder="Find a hospital pilot partner, clinician advisor, or seed investor..."
+              placeholder="Search clinicians, hospital chiefs, investors..."
               aria-label="Search directory for founders, clinicians, or partners"
-              className="w-full pl-12 pr-28 py-3.5 rounded-chip border border-line bg-white text-ink text-[14px] placeholder:text-slate focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:border-ink transition-all"
+              className="w-full pl-10 sm:pl-12 pr-24 sm:pr-28 py-3 sm:py-3.5 rounded-chip border border-line bg-white text-ink text-[13.5px] sm:text-[14px] placeholder:text-slate focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:border-ink transition-all"
             />
             {/* Coral fill + Ink text for Search */}
             <button
               type="submit"
-              className="absolute right-1.5 px-4 py-2 rounded-chip bg-coral text-ink font-bold text-small hover:opacity-90 active:scale-95 transition-all flex items-center gap-1.5 shadow-xs"
+              className="absolute right-1.5 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-chip bg-coral text-ink font-bold text-[13px] hover:opacity-90 active:scale-95 transition-all flex items-center gap-1.5 shadow-xs"
             >
               <span>Search</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -177,7 +177,7 @@ export default function HeroLiveSection({ profiles, featuredEvent }: HeroLiveSec
           </form>
 
           {/* 4 Popular Chips (no 5th chip) */}
-          <div className="flex items-center gap-2 flex-wrap pt-0.5 text-[12px]">
+          <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap pt-0.5 text-[11.5px] sm:text-[12px]">
             <span className="text-slate font-semibold tracking-wide">Popular:</span>
             {popularChips.map((chip) => {
               const isActive = activeQuery.toLowerCase() === chip.query.toLowerCase();
@@ -186,7 +186,7 @@ export default function HeroLiveSection({ profiles, featuredEvent }: HeroLiveSec
                   key={chip.label}
                   type="button"
                   onClick={() => handleChipClick(chip.query)}
-                  className={`px-3 py-1 rounded-chip border font-medium transition-all active:scale-95 focus-visible:ring-2 shadow-xs ${
+                  className={`px-2.5 sm:px-3 py-1 rounded-chip border font-medium transition-all active:scale-95 focus-visible:ring-2 shadow-xs ${
                     isActive
                       ? "bg-ink text-paper border-ink"
                       : "bg-white border-line text-slate hover:text-ink hover:border-ink"
@@ -200,13 +200,13 @@ export default function HeroLiveSection({ profiles, featuredEvent }: HeroLiveSec
         </div>
 
         {/* Action CTAs: Ink fill for Join; text link for Explore */}
-        <div className="pt-2 flex flex-wrap items-center gap-5">
+        <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-5">
           {/* Ink fill for Join */}
           <a
             href="https://tally.so/r/thc-join"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-2.5 rounded-chip bg-ink text-paper font-bold text-[14px] hover:bg-ink/90 active:scale-95 transition-all shadow-sm focus-visible:ring-2 inline-flex items-center gap-2"
+            className="px-6 py-2.5 sm:py-2.5 rounded-chip bg-ink text-paper font-bold text-[14px] hover:bg-ink/90 active:scale-95 transition-all shadow-sm focus-visible:ring-2 inline-flex items-center justify-center gap-2"
           >
             <span>Join the Community</span>
             <ArrowUpRight className="w-4 h-4" />
@@ -215,7 +215,7 @@ export default function HeroLiveSection({ profiles, featuredEvent }: HeroLiveSec
           {/* text link for Explore */}
           <Link
             href="#events"
-            className="text-ink font-semibold hover:underline inline-flex items-center gap-1.5 text-[14px] transition-colors"
+            className="text-ink font-semibold hover:underline inline-flex items-center justify-center sm:justify-start gap-1.5 text-[14px] transition-colors py-1 sm:py-0"
           >
             <span>Explore Gatherings</span>
             <ArrowRight className="w-4 h-4" />
@@ -225,46 +225,52 @@ export default function HeroLiveSection({ profiles, featuredEvent }: HeroLiveSec
 
       {/* Right Column: Single "live results" Card matching mockup (5 cols) */}
       <div className="lg:col-span-5 relative">
-        <div className="p-5 sm:p-6 rounded-card border border-line bg-white shadow-card space-y-4">
+        <div className="p-4 sm:p-6 rounded-card border border-line bg-white shadow-card space-y-3.5 sm:space-y-4">
           {/* Card Header: Matches for <active query> with result count */}
-          <div className="flex items-center justify-between pb-3.5 border-b border-line">
-            <span className="font-sans font-bold text-ink text-[15px] truncate pr-2">
+          <div className="flex items-center justify-between pb-3 sm:pb-3.5 border-b border-line">
+            <span className="font-sans font-bold text-ink text-[14px] sm:text-[15px] truncate pr-2">
               Matches for &ldquo;{activeQuery}&rdquo;
             </span>
-            <span className="text-[12px] font-semibold text-slate shrink-0">
+            <span className="text-[11.5px] sm:text-[12px] font-semibold text-slate shrink-0">
               {resultCount} {resultCount === 1 ? "match" : "matches"}
             </span>
           </div>
 
-          {/* Exactly 3 one-line rows from directory.json */}
+          {/* Exactly 3 one-line rows from directory.json with mobile optimization */}
           <div className="space-y-1">
             {topThree.map((person) => {
               const roleClean = formatRole(person.headline);
               return (
                 <div
                   key={person.id}
-                  className="flex items-center justify-between gap-3 py-2.5 border-b border-line/60 last:border-b-0 hover:bg-paper/60 px-1 rounded-md transition-colors"
+                  className="flex items-center justify-between gap-3 py-2 sm:py-2.5 border-b border-line/60 last:border-b-0 hover:bg-paper/60 px-1 rounded-md transition-colors"
                 >
                   {/* Left: Avatar + Name with Verified check + Role · Organisation */}
                   <div className="flex items-center gap-2.5 min-w-0 flex-1">
                     {/* Initials Avatar */}
-                    <div className="w-7 h-7 rounded-full bg-lilac text-ink font-bold text-[11px] flex items-center justify-center shrink-0">
+                    <div className="w-7 h-7 sm:w-7 sm:h-7 rounded-full bg-lilac text-ink font-bold text-[11px] flex items-center justify-center shrink-0">
                       {getInitials(person.name)}
                     </div>
 
-                    {/* Name + Verified Check */}
-                    <div className="flex items-center gap-1 shrink-0">
-                      <span className="font-sans font-bold text-[13.5px] text-ink truncate">
-                        {person.name}
-                      </span>
-                      {person.verified && (
-                        <CheckCircle2 className="w-3.5 h-3.5 text-teal shrink-0" />
-                      )}
+                    {/* Name + Verified Check + Mobile Subhead */}
+                    <div className="min-w-0 flex-1">
+                      <div className="flex items-center gap-1">
+                        <span className="font-sans font-bold text-[13px] sm:text-[13.5px] text-ink truncate">
+                          {person.name}
+                        </span>
+                        {person.verified && (
+                          <CheckCircle2 className="w-3.5 h-3.5 text-teal shrink-0" />
+                        )}
+                      </div>
+                      {/* Sub-line for mobile: role and org */}
+                      <p className="text-[11px] text-slate truncate font-normal sm:hidden mt-0.5">
+                        {roleClean} · {person.organisation}
+                      </p>
                     </div>
 
                     <span className="text-line shrink-0 hidden sm:inline">·</span>
 
-                    {/* Role · Organisation (No quotes, tags, money figures or monospace) */}
+                    {/* Role · Organisation on desktop */}
                     <span className="text-[12.5px] text-slate truncate font-normal hidden sm:inline">
                       {roleClean} · {person.organisation}
                     </span>
@@ -272,7 +278,7 @@ export default function HeroLiveSection({ profiles, featuredEvent }: HeroLiveSec
 
                   {/* Right: City */}
                   <div className="shrink-0 text-right">
-                    <span className="text-[12px] text-slate font-medium">
+                    <span className="text-[11.5px] sm:text-[12px] text-slate font-medium">
                       {person.city}
                     </span>
                   </div>
@@ -282,7 +288,7 @@ export default function HeroLiveSection({ profiles, featuredEvent }: HeroLiveSec
           </div>
 
           {/* Footer: "Sample data" + "See all matches" link to /directory?q=<query> */}
-          <div className="pt-3 border-t border-line flex items-center justify-between text-[12px]">
+          <div className="pt-2.5 sm:pt-3 border-t border-line flex items-center justify-between text-[11.5px] sm:text-[12px]">
             <span className="text-slate font-medium">Sample data</span>
             <Link
               href={`/directory?q=${encodeURIComponent(activeQuery)}`}

@@ -170,33 +170,33 @@ export default function DirectoryPreview({
   return (
     <section
       id="directory"
-      className="py-16 md:py-20 bg-canvas-subtle border-b border-line relative overflow-hidden"
+      className="py-12 sm:py-16 md:py-20 bg-canvas-subtle border-b border-line relative overflow-hidden"
     >
       {/* Interconnected Clinical & Founder Network Mesh */}
       <BackgroundPattern variant="network-mesh" />
 
       <div className="max-w-container mx-auto px-4 md:px-6 relative z-10">
         {/* Section Header with View & Controls */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
-          <div className="max-w-2xl space-y-2.5">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-5 sm:gap-6 mb-6 sm:mb-8">
+          <div className="max-w-2xl space-y-2 sm:space-y-2.5">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-chip bg-lilac/70 border border-line text-ink text-[12px] font-bold">
               <span>The Peer Network</span>
             </div>
-            <h2 className="text-[32px] sm:text-[42px] font-sans font-extrabold text-ink tracking-tight leading-tight">
+            <h2 className="text-[28px] sm:text-[36px] md:text-[42px] font-sans font-extrabold text-ink tracking-tight leading-tight">
               Reach the people who{" "}
               <span className="italic font-serif text-ink font-normal">matter.</span>
             </h2>
-            <p className="text-[16px] text-slate leading-relaxed">
+            <p className="text-[14.5px] sm:text-[16px] text-slate leading-relaxed">
               Search vetted clinicians, hospital innovation directors, and healthtech founders who
               can validate your pilot, invest in your round, or guide your regulatory filing.
             </p>
           </div>
 
           {/* Controls: Tiles per page selector (3, 6, 9, 12) OR List per page selector (5, 10, 15, Custom) & View Mode */}
-          <div className="shrink-0 flex flex-wrap items-center gap-3">
+          <div className="shrink-0 flex flex-wrap items-center justify-between sm:justify-start gap-2.5 sm:gap-3">
             {/* Page Size Selector */}
             <div className="flex items-center gap-1 bg-white p-1 rounded-chip border border-line shadow-xs">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-slate px-2">
+              <span className="text-[10.5px] sm:text-[11px] font-bold uppercase tracking-wider text-slate px-1.5 sm:px-2">
                 Show:
               </span>
               {viewMode === "list" ? (
@@ -212,7 +212,7 @@ export default function DirectoryPreview({
                           setListPageSize(size);
                           setCurrentPage(1);
                         }}
-                        className={`px-2.5 py-1 rounded-chip text-[12px] font-bold transition-all ${
+                        className={`px-2 sm:px-2.5 py-1 rounded-chip text-[11.5px] sm:text-[12px] font-bold transition-all ${
                           isSelected
                             ? "bg-ink text-paper shadow-xs"
                             : "text-slate hover:text-ink hover:bg-slate-50"
@@ -225,8 +225,8 @@ export default function DirectoryPreview({
 
                   {/* Custom Option */}
                   {isCustomList ? (
-                    <div className="flex items-center gap-1 px-2 py-0.5 rounded-chip bg-ink text-paper text-[12px] font-bold shadow-xs">
-                      <span className="text-[11px]">Custom:</span>
+                    <div className="flex items-center gap-1 px-2 py-0.5 rounded-chip bg-ink text-paper text-[11.5px] sm:text-[12px] font-bold shadow-xs">
+                      <span className="text-[10.5px]">Custom:</span>
                       <input
                         type="number"
                         min={1}
@@ -324,8 +324,8 @@ export default function DirectoryPreview({
         </div>
 
         {/* Search & Secondary Filter Toolbar */}
-        <div className="bg-white p-3.5 sm:p-4 rounded-[18px] border border-line shadow-card mb-6 space-y-3">
-          <div className="flex flex-col md:flex-row items-stretch md:items-center gap-3">
+        <div className="bg-white p-3 sm:p-4 rounded-[16px] sm:rounded-[18px] border border-line shadow-card mb-5 sm:mb-6 space-y-2.5 sm:space-y-3">
+          <div className="flex flex-col md:flex-row items-stretch md:items-center gap-2.5 sm:gap-3">
             {/* Search Input */}
             <div className="relative flex-1">
               <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate pointer-events-none">
@@ -335,73 +335,77 @@ export default function DirectoryPreview({
                 type="text"
                 value={searchQuery}
                 onChange={(e) => handleSearchChange(e.target.value)}
-                placeholder="Search by name, role, hospital, focus area, or city..."
-                className="w-full pl-10 pr-9 py-2.5 rounded-chip border border-line bg-canvas-subtle text-[13.5px] text-ink placeholder:text-slate focus:outline-none focus:ring-2 focus:ring-ink focus:border-ink focus:bg-white transition-all"
+                placeholder="Search name, role, hospital, focus area, or city..."
+                className="w-full pl-9 sm:pl-10 pr-9 py-2 sm:py-2.5 rounded-chip border border-line bg-canvas-subtle text-[13px] sm:text-[13.5px] text-ink placeholder:text-slate focus:outline-none focus:ring-2 focus:ring-ink focus:border-ink focus:bg-white transition-all"
               />
               {searchQuery && (
                 <button
                   type="button"
                   onClick={() => handleSearchChange("")}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-slate hover:text-ink p-0.5"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-slate hover:text-ink p-1"
+                  aria-label="Clear search"
                 >
                   <X className="w-4 h-4" />
                 </button>
               )}
             </div>
 
-            {/* City Filter */}
-            <div className="relative shrink-0 min-w-[160px]">
-              <div className="absolute left-3 top-1/2 -translate-y-1/2 text-teal pointer-events-none">
-                <MapPin className="w-3.5 h-3.5" />
+            {/* Secondary Controls Row on Mobile */}
+            <div className="flex flex-wrap sm:flex-nowrap items-center gap-2 sm:gap-3">
+              {/* City Filter */}
+              <div className="relative flex-1 sm:flex-initial sm:min-w-[150px]">
+                <div className="absolute left-3 top-1/2 -translate-y-1/2 text-teal pointer-events-none">
+                  <MapPin className="w-3.5 h-3.5" />
+                </div>
+                <select
+                  value={selectedCity}
+                  onChange={(e) => handleCityChange(e.target.value)}
+                  className="w-full pl-8 pr-7 py-2 sm:py-2.5 rounded-chip border border-line bg-canvas-subtle text-[12.5px] sm:text-[13px] font-semibold text-ink focus:outline-none focus:ring-2 focus:ring-ink focus:border-ink focus:bg-white appearance-none transition-all cursor-pointer"
+                >
+                  {cities.map((city) => (
+                    <option key={city} value={city}>
+                      {city === "All" ? "All Cities" : city}
+                    </option>
+                  ))}
+                </select>
+                <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate text-[10px]">
+                  ▼
+                </div>
               </div>
-              <select
-                value={selectedCity}
-                onChange={(e) => handleCityChange(e.target.value)}
-                className="w-full pl-8 pr-8 py-2.5 rounded-chip border border-line bg-canvas-subtle text-[13px] font-semibold text-ink focus:outline-none focus:ring-2 focus:ring-ink focus:border-ink focus:bg-white appearance-none transition-all cursor-pointer"
-              >
-                {cities.map((city) => (
-                  <option key={city} value={city}>
-                    {city === "All" ? "All Cities" : city}
-                  </option>
-                ))}
-              </select>
-              <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate text-[10px]">
-                ▼
-              </div>
-            </div>
 
-            {/* Verified Only Toggle */}
-            <button
-              type="button"
-              onClick={handleVerifiedToggle}
-              className={`shrink-0 px-3.5 py-2.5 rounded-chip text-[12.5px] font-bold border transition-all inline-flex items-center gap-1.5 ${
-                verifiedOnly
-                  ? "bg-teal/15 border-teal/40 text-teal-text shadow-xs"
-                  : "bg-canvas-subtle border-line text-slate hover:text-ink hover:bg-slate-100/70"
-              }`}
-            >
-              <CheckCircle2
-                className={`w-3.5 h-3.5 ${verifiedOnly ? "text-teal" : "text-slate"}`}
-              />
-              <span>Verified Only</span>
-            </button>
-
-            {/* Reset Filters (when active) */}
-            {activeFilterCount > 0 && (
+              {/* Verified Only Toggle */}
               <button
                 type="button"
-                onClick={resetAllFilters}
-                className="shrink-0 px-3 py-2 rounded-chip text-[12px] font-semibold text-coral-text hover:bg-coral/10 border border-transparent hover:border-coral/20 transition-all inline-flex items-center gap-1.5"
+                onClick={handleVerifiedToggle}
+                className={`flex-1 sm:flex-initial px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-chip text-[12px] sm:text-[12.5px] font-bold border transition-all inline-flex items-center justify-center gap-1.5 ${
+                  verifiedOnly
+                    ? "bg-teal/15 border-teal/40 text-teal-text shadow-xs"
+                    : "bg-canvas-subtle border-line text-slate hover:text-ink hover:bg-slate-100/70"
+                }`}
               >
-                <RotateCcw className="w-3 h-3" />
-                <span>Reset ({activeFilterCount})</span>
+                <CheckCircle2
+                  className={`w-3.5 h-3.5 ${verifiedOnly ? "text-teal" : "text-slate"}`}
+                />
+                <span>Verified Only</span>
               </button>
-            )}
+
+              {/* Reset Filters (when active) */}
+              {activeFilterCount > 0 && (
+                <button
+                  type="button"
+                  onClick={resetAllFilters}
+                  className="w-full sm:w-auto px-3 py-1.5 sm:py-2 rounded-chip text-[12px] font-semibold text-coral-text hover:bg-coral/10 border border-transparent hover:border-coral/20 transition-all inline-flex items-center justify-center gap-1.5"
+                >
+                  <RotateCcw className="w-3 h-3" />
+                  <span>Reset ({activeFilterCount})</span>
+                </button>
+              )}
+            </div>
           </div>
         </div>
 
-        {/* Category Filter Chips with Live Counts */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-3 mb-8 scrollbar-none">
+        {/* Category Filter Chips with Live Counts (Edge-to-edge swipe on mobile) */}
+        <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-2.5 mb-6 sm:mb-8 scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0">
           {categories.map((cat) => {
             const isSelected = selectedCategory === cat;
             const count = categoryCounts[cat] || 0;
@@ -410,7 +414,7 @@ export default function DirectoryPreview({
                 key={cat}
                 type="button"
                 onClick={() => handleCategoryChange(cat)}
-                className={`px-4 py-2 rounded-chip text-[13px] font-semibold whitespace-nowrap transition-all focus-visible:ring-2 inline-flex items-center gap-2 ${
+                className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-chip text-[12px] sm:text-[13px] font-semibold whitespace-nowrap transition-all focus-visible:ring-2 inline-flex items-center gap-1.5 sm:gap-2 active:scale-95 shrink-0 ${
                   isSelected
                     ? "bg-ink text-paper shadow-sm"
                     : "border border-line bg-white text-slate hover:text-ink hover:border-ink"
@@ -418,7 +422,7 @@ export default function DirectoryPreview({
               >
                 <span>{cat}</span>
                 <span
-                  className={`text-[11px] px-1.5 py-0.2 rounded-full font-mono ${
+                  className={`text-[10.5px] sm:text-[11px] px-1.5 py-0.2 rounded-full font-mono ${
                     isSelected ? "bg-paper/20 text-paper" : "bg-slate-100 text-slate"
                   }`}
                 >
@@ -452,43 +456,43 @@ export default function DirectoryPreview({
           </div>
         ) : viewMode === "tiles" ? (
           /* Profile Cards Grid (Tiles View: Max 12 tiles, then next page only) */
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {displayedProfiles.map((profile, idx) => (
               <div
                 key={profile.id}
-                className="p-6 rounded-card border border-line bg-white shadow-card hover:-translate-y-1 hover:border-ink/30 transition-all duration-normal flex flex-col justify-between space-y-4"
+                className="p-4 sm:p-6 rounded-card border border-line bg-white shadow-card hover:-translate-y-1 hover:border-ink/30 transition-all duration-normal flex flex-col justify-between space-y-3.5 sm:space-y-4"
               >
-                <div className="space-y-3.5">
+                <div className="space-y-3 sm:space-y-3.5">
                   {/* Top Row: PhotoSlot + Names + Badges */}
-                  <div className="flex items-start gap-3.5">
+                  <div className="flex items-start gap-3 sm:gap-3.5">
                     <PhotoSlot
                       name={profile.name}
                       photo={profile.photo}
-                      size="lg"
+                      size="md"
                       tint={tints[idx % tints.length]}
                     />
                     <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <span className="font-sans font-bold text-[16px] text-ink leading-snug">
+                      <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+                        <span className="font-sans font-bold text-[15px] sm:text-[16px] text-ink leading-snug">
                           {profile.name}
                         </span>
                         {profile.verified ? (
-                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-chip bg-teal/15 border border-teal/30 text-teal-text text-[11px] font-bold">
+                          <span className="inline-flex items-center gap-1 px-1.5 sm:px-2 py-0.5 rounded-chip bg-teal/15 border border-teal/30 text-teal-text text-[10.5px] sm:text-[11px] font-bold">
                             <CheckCircle2 className="w-3 h-3" />
                             <span>Verified</span>
                           </span>
                         ) : (
-                          <span className="inline-flex items-center px-2 py-0.5 rounded-chip bg-slate-100 text-slate text-[11px] font-semibold">
+                          <span className="inline-flex items-center px-1.5 sm:px-2 py-0.5 rounded-chip bg-slate-100 text-slate text-[10.5px] sm:text-[11px] font-semibold">
                             Peer
                           </span>
                         )}
                       </div>
 
-                      <div className="text-[13px] font-medium text-slate mt-0.5">
+                      <div className="text-[12.5px] sm:text-[13px] font-medium text-slate mt-0.5">
                         {profile.headline}
                       </div>
 
-                      <div className="flex items-center gap-2 mt-1.5">
+                      <div className="flex items-center gap-2 mt-1 sm:mt-1.5">
                         <span className="text-[11px] text-slate font-medium">
                           {profile.organisation}
                         </span>
@@ -503,13 +507,13 @@ export default function DirectoryPreview({
                   </div>
 
                   {/* Bio Snippet */}
-                  <p className="text-[13px] text-slate leading-relaxed line-clamp-2">
+                  <p className="text-[12.5px] sm:text-[13px] text-slate leading-relaxed line-clamp-2">
                     {profile.bio}
                   </p>
 
                   {/* Tags & Metadata */}
                   <div className="space-y-2 pt-2 border-t border-line/70 text-small">
-                    <div className="flex items-center gap-2 text-slate text-[12px]">
+                    <div className="flex items-center gap-1.5 text-slate text-[11.5px] sm:text-[12px]">
                       <MapPin className="w-3.5 h-3.5 text-teal" />
                       <span>
                         {profile.city}, {profile.state}
@@ -520,13 +524,13 @@ export default function DirectoryPreview({
                       {profile.focus_areas.map((tag) => (
                         <span
                           key={tag}
-                          className="px-2.5 py-0.5 rounded-chip bg-paper border border-line text-ink text-[11px] font-semibold"
+                          className="px-2 sm:px-2.5 py-0.5 rounded-chip bg-paper border border-line text-ink text-[10.5px] sm:text-[11px] font-semibold"
                         >
                           {tag}
                         </span>
                       ))}
                       {profile.open_to[0] && (
-                        <span className="px-2.5 py-0.5 rounded-chip border border-line text-slate text-[11px]">
+                        <span className="px-2 sm:px-2.5 py-0.5 rounded-chip border border-line text-slate text-[10.5px] sm:text-[11px]">
                           Open to: {profile.open_to[0]}
                         </span>
                       )}
@@ -535,8 +539,8 @@ export default function DirectoryPreview({
                 </div>
 
                 {/* Bottom Intro CTA */}
-                <div className="pt-3.5 border-t border-line/80 flex items-center justify-between">
-                  <span className="text-[12px] text-slate font-medium">
+                <div className="pt-3 border-t border-line/80 flex items-center justify-between">
+                  <span className="text-[11.5px] sm:text-[12px] text-slate font-medium">
                     Mode: <strong className="text-ink">{profile.intro_mode}</strong>
                   </span>
 
@@ -559,10 +563,10 @@ export default function DirectoryPreview({
             {displayedProfiles.map((profile, idx) => (
               <div
                 key={profile.id}
-                className="p-4 sm:p-5 rounded-card border border-line bg-white shadow-xs hover:border-ink/30 hover:shadow-card transition-all flex flex-col md:flex-row md:items-center justify-between gap-4"
+                className="p-3.5 sm:p-5 rounded-card border border-line bg-white shadow-xs hover:border-ink/30 hover:shadow-card transition-all flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4"
               >
                 {/* Profile Avatar + Main Info */}
-                <div className="flex items-start sm:items-center gap-3.5 min-w-0 flex-1">
+                <div className="flex items-start sm:items-center gap-3 sm:gap-3.5 min-w-0 flex-1">
                   <PhotoSlot
                     name={profile.name}
                     photo={profile.photo}
@@ -570,22 +574,22 @@ export default function DirectoryPreview({
                     tint={tints[idx % tints.length]}
                   />
                   <div className="min-w-0 flex-1">
-                    <div className="flex items-center gap-2 flex-wrap">
-                      <span className="font-sans font-bold text-[15px] text-ink">
+                    <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+                      <span className="font-sans font-bold text-[14.5px] sm:text-[15px] text-ink">
                         {profile.name}
                       </span>
                       {profile.verified && (
-                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-chip bg-teal/15 border border-teal/30 text-teal-text text-[10px] font-bold">
+                        <span className="inline-flex items-center gap-1 px-1.5 sm:px-2 py-0.5 rounded-chip bg-teal/15 border border-teal/30 text-teal-text text-[10px] font-bold">
                           <CheckCircle2 className="w-2.5 h-2.5" />
                           <span>Verified</span>
                         </span>
                       )}
                       <span className="text-[12px] text-slate hidden sm:inline">·</span>
-                      <span className="text-[12px] text-slate font-medium">
+                      <span className="text-[11.5px] sm:text-[12px] text-slate font-medium">
                         {profile.organisation}
                       </span>
                     </div>
-                    <div className="text-[13px] text-slate font-medium truncate mt-0.5">
+                    <div className="text-[12.5px] sm:text-[13px] text-slate font-medium truncate mt-0.5">
                       {profile.headline}
                     </div>
                   </div>
@@ -604,8 +608,8 @@ export default function DirectoryPreview({
                 </div>
 
                 {/* City & Action */}
-                <div className="flex items-center justify-between md:justify-end gap-4 shrink-0 pt-2 md:pt-0 border-t md:border-t-0 border-line/60">
-                  <div className="flex items-center gap-1.5 text-slate text-[12px]">
+                <div className="flex items-center justify-between md:justify-end gap-3 sm:gap-4 shrink-0 pt-2 md:pt-0 border-t md:border-t-0 border-line/60">
+                  <div className="flex items-center gap-1.5 text-slate text-[11.5px] sm:text-[12px]">
                     <MapPin className="w-3.5 h-3.5 text-teal" />
                     <span>{profile.city}</span>
                   </div>
@@ -614,7 +618,7 @@ export default function DirectoryPreview({
                     href="https://tally.so/r/thc-intro"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 rounded-chip bg-gradient-to-r from-[#090D16] via-[#0E1E38] to-[#2563EB] hover:to-[#06B6D4] text-white text-[12px] font-semibold hover:shadow-md active:scale-95 transition-all flex items-center gap-1.5 shadow-xs border border-white/10"
+                    className="px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-chip bg-gradient-to-r from-[#090D16] via-[#0E1E38] to-[#2563EB] hover:to-[#06B6D4] text-white text-[11.5px] sm:text-[12px] font-semibold hover:shadow-md active:scale-95 transition-all flex items-center gap-1.5 shadow-xs border border-white/10"
                   >
                     <span>Request Intro</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -627,9 +631,9 @@ export default function DirectoryPreview({
 
         {/* Dynamic Pagination Controls & Status Bar */}
         {totalProfiles > 0 && (
-          <div className="mt-10 pt-6 border-t border-line flex flex-col md:flex-row items-center justify-between gap-5">
+          <div className="mt-8 sm:mt-10 pt-5 sm:pt-6 border-t border-line flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-5">
             {/* Status: Showing X–Y of Z */}
-            <div className="text-[13.5px] text-slate text-center md:text-left">
+            <div className="text-[12.5px] sm:text-[13.5px] text-slate text-center md:text-left">
               Showing <strong className="text-ink">{startIndex + 1}</strong>–
               <strong className="text-ink">{endIndex}</strong> of{" "}
               <strong className="text-ink">{totalProfiles}</strong> peer profiles
@@ -643,20 +647,25 @@ export default function DirectoryPreview({
 
             {/* Pagination Controls with Page Shifting */}
             {totalPages > 1 && (
-              <div className="flex items-center gap-1.5">
+              <div className="flex items-center gap-1.5 justify-center">
                 {/* Previous Button */}
                 <button
                   type="button"
                   disabled={validPage <= 1}
                   onClick={() => goToPage(validPage - 1)}
-                  className="px-3.5 py-1.5 rounded-chip border border-line bg-white text-[12.5px] font-semibold text-slate hover:text-ink hover:border-ink disabled:opacity-40 disabled:cursor-not-allowed transition-all inline-flex items-center gap-1 shadow-xs"
+                  className="px-3 sm:px-3.5 py-1.5 rounded-chip border border-line bg-white text-[12px] sm:text-[12.5px] font-semibold text-slate hover:text-ink hover:border-ink disabled:opacity-40 disabled:cursor-not-allowed transition-all inline-flex items-center gap-1 shadow-xs"
                 >
                   <ChevronLeft className="w-4 h-4" />
                   <span>Previous</span>
                 </button>
 
-                {/* Page Number Pills */}
-                <div className="flex items-center gap-1">
+                {/* Mobile Page Indicator */}
+                <span className="sm:hidden px-2 text-[12px] font-bold text-ink">
+                  {validPage} / {totalPages}
+                </span>
+
+                {/* Page Number Pills on sm+ */}
+                <div className="hidden sm:flex items-center gap-1">
                   {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => {
                     const isCurrent = validPage === pageNum;
                     return (
@@ -681,7 +690,7 @@ export default function DirectoryPreview({
                   type="button"
                   disabled={validPage >= totalPages}
                   onClick={() => goToPage(validPage + 1)}
-                  className="px-3.5 py-1.5 rounded-chip border border-line bg-white text-[12.5px] font-semibold text-slate hover:text-ink hover:border-ink disabled:opacity-40 disabled:cursor-not-allowed transition-all inline-flex items-center gap-1 shadow-xs"
+                  className="px-3 sm:px-3.5 py-1.5 rounded-chip border border-line bg-white text-[12px] sm:text-[12.5px] font-semibold text-slate hover:text-ink hover:border-ink disabled:opacity-40 disabled:cursor-not-allowed transition-all inline-flex items-center gap-1 shadow-xs"
                 >
                   <span>Next</span>
                   <ChevronRight className="w-4 h-4" />
@@ -690,12 +699,12 @@ export default function DirectoryPreview({
             )}
 
             {/* Browse Full Directory CTA */}
-            <div>
+            <div className="w-full sm:w-auto flex justify-center">
               <a
                 href="https://tally.so/r/thc-join"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-5 py-2.5 rounded-chip bg-ink text-paper font-bold text-[13px] hover:bg-ink/90 active:scale-95 transition-all shadow-xs focus-visible:ring-2 inline-flex items-center gap-2"
+                className="w-full sm:w-auto px-5 py-2.5 rounded-chip bg-ink text-paper font-bold text-[13px] hover:bg-ink/90 active:scale-95 transition-all shadow-xs focus-visible:ring-2 inline-flex items-center justify-center gap-2"
               >
                 <span>Browse Full Directory</span>
                 <ArrowRight className="w-4 h-4" />

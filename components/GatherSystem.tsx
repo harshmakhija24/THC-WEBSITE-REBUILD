@@ -79,7 +79,7 @@ export default function GatherSystem() {
   return (
     <section
       id="events"
-      className="bg-[#F8FAFC] text-obsidian py-24 md:py-32 relative overflow-hidden border-y border-border-subtle"
+      className="bg-[#F8FAFC] text-obsidian py-14 sm:py-20 md:py-28 relative overflow-hidden border-y border-border-subtle"
     >
       {/* 3D Perspective Wireframe Room Grid Background in Tech Slate */}
       <PerspectiveGrid
@@ -90,19 +90,19 @@ export default function GatherSystem() {
 
       <div className="max-w-container mx-auto px-4 md:px-6 relative z-10">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
-          <div className="max-w-2xl space-y-3.5">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 sm:gap-6 mb-8 sm:mb-12">
+          <div className="max-w-2xl space-y-2.5 sm:space-y-3.5">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-chip bg-obsidian text-white text-[11px] font-bold tracking-wider uppercase shadow-xs">
               <Sparkles className="w-3.5 h-3.5 text-blue-400" />
               <span>The Gathering System</span>
             </div>
 
-            <h2 className="text-[34px] sm:text-[46px] font-sans font-bold text-obsidian tracking-tight leading-tight">
+            <h2 className="text-[28px] sm:text-[38px] md:text-[46px] font-sans font-bold text-obsidian tracking-tight leading-tight">
               Where clinical validation meets{" "}
               <span className="italic font-serif text-cobalt font-normal">fellowship.</span>
             </h2>
 
-            <p className="text-[16px] text-text-secondary leading-relaxed font-normal">
+            <p className="text-[14.5px] sm:text-[16px] text-text-secondary leading-relaxed font-normal">
               Healthcare innovation requires trust that cannot be built over Zoom. We organize a
               system of high-cadence in-person rooms designed for every stage of clinical adoption.
             </p>
@@ -113,7 +113,7 @@ export default function GatherSystem() {
               href="https://lu.ma/thc-gatherings"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-cobalt hover:text-cobalt-hover font-bold text-[15px] inline-flex items-center gap-1.5 transition-colors group"
+              className="text-cobalt hover:text-cobalt-hover font-bold text-[14px] sm:text-[15px] inline-flex items-center gap-1.5 transition-colors group"
             >
               <span>See all formats</span>
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -122,19 +122,19 @@ export default function GatherSystem() {
         </div>
 
         {/* 3 Signature Gathering Cards Harmonized with THC Modern Tech Palette */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-7 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 lg:gap-7 items-stretch">
           {formats.map((fmt) => (
             <div
               key={fmt.id}
-              className={`${fmt.bgColor} ${fmt.cardBorder} rounded-[24px] overflow-hidden shadow-[0_16px_36px_-8px_rgba(15,23,42,0.12)] hover:shadow-[0_24px_48px_-12px_rgba(37,99,235,0.22)] hover:-translate-y-1.5 transition-all duration-normal flex flex-col justify-between group`}
+              className={`${fmt.bgColor} ${fmt.cardBorder} rounded-[20px] sm:rounded-[24px] overflow-hidden shadow-[0_16px_36px_-8px_rgba(15,23,42,0.12)] hover:shadow-[0_24px_48px_-12px_rgba(37,99,235,0.22)] hover:-translate-y-1.5 transition-all duration-normal flex flex-col justify-between group`}
             >
               {/* Top Text & Badges Container */}
-              <div className="p-6 sm:p-7 space-y-4">
+              <div className="p-5 sm:p-7 space-y-3 sm:space-y-4">
                 {/* Title */}
-                <h3 className={`${fmt.titleStyle} leading-tight`}>{fmt.title}</h3>
+                <h3 className={`${fmt.titleStyle} text-[22px] sm:text-[26px] leading-tight`}>{fmt.title}</h3>
 
                 {/* Subhead with ultra-high legibility */}
-                <p className="text-[14px] text-slate-200 text-[#E2E8F0] leading-relaxed font-normal min-h-[44px]">
+                <p className="text-[13.5px] sm:text-[14px] text-slate-200 text-[#E2E8F0] leading-relaxed font-normal sm:min-h-[44px]">
                   {fmt.subhead}
                 </p>
 

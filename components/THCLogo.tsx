@@ -47,11 +47,11 @@ export default function THCLogo({
 
       {/* Wordmark */}
       {showWordmark && (
-        <div className="flex flex-col">
-          <span className={`font-sans font-bold text-h3 leading-tight tracking-tight ${textColor}`}>
+        <div className="flex flex-col min-w-0">
+          <span className={`font-sans font-bold text-[15px] sm:text-[18px] md:text-h3 leading-tight tracking-tight truncate ${textColor}`}>
             The Healthtech Collective
           </span>
-          <span className={`text-[12px] font-medium tracking-wide ${subColor}`}>
+          <span className={`text-[10.5px] sm:text-[12px] font-medium tracking-wide truncate ${subColor}`}>
             India&apos;s Healthtech Front Door
           </span>
         </div>
