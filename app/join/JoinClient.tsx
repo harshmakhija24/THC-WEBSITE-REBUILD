@@ -142,7 +142,7 @@ export default function JoinClient() {
           {/* Dual-Pane Bento Grid: Left Free WhatsApp Intake | Right Gatherings Showcase */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 mt-6 sm:mt-8 items-stretch">
             {/* Left Pane: WhatsApp Community Pass (Decluttered & Clean) */}
-            <div className="lg:col-span-6 p-5 sm:p-6 rounded-[22px] border-2 border-emerald-500/35 bg-white shadow-elevated relative overflow-hidden flex flex-col justify-between group">
+            <div id="whatsapp" className="lg:col-span-6 p-5 sm:p-6 rounded-[22px] border-2 border-emerald-500/35 bg-white shadow-elevated relative overflow-hidden flex flex-col justify-between group scroll-mt-24">
               {/* Subtle ambient radiant glow */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-100/40 rounded-full blur-3xl pointer-events-none -mr-16 -mt-16" />
 
@@ -233,7 +233,7 @@ export default function JoinClient() {
             </div>
 
             {/* Right Pane: Inside Gatherings (Interactive Photo Showcase) */}
-            <div className="lg:col-span-6 p-5 sm:p-6 rounded-[22px] border border-border-subtle bg-white shadow-card flex flex-col justify-between">
+            <div id="gatherings" className="lg:col-span-6 p-5 sm:p-6 rounded-[22px] border border-border-subtle bg-white shadow-card flex flex-col justify-between scroll-mt-24">
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <div className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-cobalt">
@@ -333,7 +333,7 @@ export default function JoinClient() {
       {/* ========================================================================= */}
       {/* SCROLL 2: PRICING COMPARISON, BULLETPROOF FAQ & FAST ENROLL (Height: ~850px) */}
       {/* ========================================================================= */}
-      <section className="relative py-8 sm:py-12 bg-canvas-subtle border-b border-border-subtle overflow-hidden">
+      <section id="pricing" className="relative py-8 sm:py-12 bg-canvas-subtle border-b border-border-subtle overflow-hidden scroll-mt-16">
         {/* Continuous Tech Blueprint Lines */}
         <BackgroundPattern
           variant="tech-blueprint"
@@ -538,7 +538,7 @@ export default function JoinClient() {
           {/* ========================================================================= */}
           {/* BULLETPROOF 2-COLUMN FAQ GRID (Zero Overflow, Guaranteed Padding)         */}
           {/* ========================================================================= */}
-          <div className="mt-8 pt-6 border-t border-border-subtle">
+          <div id="faq" className="mt-8 pt-6 border-t border-border-subtle scroll-mt-20">
             <div className="mb-4">
               <span className="text-[11px] font-extrabold uppercase tracking-wider text-cobalt">
                 Clear Answers
