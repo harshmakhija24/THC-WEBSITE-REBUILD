@@ -49,15 +49,13 @@ export default function Header() {
           >
             Explore Directory
           </Link>
-          <a
-            href="https://tally.so/r/thc-join"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/join"
             className="px-4.5 py-2 rounded-chip bg-ink text-paper font-semibold text-small hover:bg-ink/90 active:scale-95 transition-all shadow-sm focus-visible:ring-2 flex items-center gap-1.5"
           >
             <span>Join Community</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -96,15 +94,14 @@ export default function Header() {
             >
               Explore Directory
             </Link>
-            <a
-              href="https://tally.so/r/thc-join"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/join"
+              onClick={() => setMobileMenuOpen(false)}
               className="w-full text-center py-3 rounded-chip bg-ink text-paper font-bold text-body flex items-center justify-center gap-2 active:scale-95 transition-all shadow-sm"
             >
               <span>Join the Community</span>
               <ArrowUpRight className="w-4 h-4" />
-            </a>
+            </Link>
           </div>
         </div>
       )}

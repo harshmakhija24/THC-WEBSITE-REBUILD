@@ -202,15 +202,13 @@ export default function HeroLiveSection({ profiles, featuredEvent }: HeroLiveSec
         {/* Action CTAs: Ink fill for Join; text link for Explore */}
         <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-5">
           {/* Ink fill for Join */}
-          <a
-            href="https://tally.so/r/thc-join"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/join"
             className="px-6 py-2.5 sm:py-2.5 rounded-chip bg-ink text-paper font-bold text-[14px] hover:bg-ink/90 active:scale-95 transition-all shadow-sm focus-visible:ring-2 inline-flex items-center justify-center gap-2"
           >
             <span>Join the Community</span>
             <ArrowUpRight className="w-4 h-4" />
-          </a>
+          </Link>
 
           {/* text link for Explore */}
           <Link

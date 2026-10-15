@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import BackgroundPattern from "./BackgroundPattern";
 import {
   ShieldCheck,
@@ -195,15 +196,13 @@ export default function AudienceAndSteps() {
               Applications are reviewed weekly. Join 12,500+ leaders across India.
             </div>
           </div>
-          <a
-            href="https://tally.so/r/thc-join"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/join"
             className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-3.5 rounded-chip bg-cobalt text-white font-bold text-[14px] sm:text-[15px] hover:bg-cobalt-hover active:scale-95 transition-all shadow-md shrink-0 flex items-center justify-center gap-2 focus-visible:ring-2 focus-visible:ring-white relative z-10"
           >
             <span>Apply to Join THC</span>
             <ArrowRight className="w-4 h-4" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
