@@ -239,77 +239,83 @@ export default function JoinClient({ testimonials }: JoinClientProps) {
           {/* 3 Photos Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Card 1: Summit */}
-            <div className="rounded-[20px] overflow-hidden border border-border-subtle bg-white shadow-card group">
-              <div className="relative h-56 w-full overflow-hidden bg-slate-900">
-                <Image
-                  src={summitImg}
-                  alt="THC Clinical Validation Summit"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                <div className="absolute bottom-3 left-3 right-3 text-white">
-                  <span className="px-2 py-0.5 rounded bg-cobalt text-[10.5px] font-bold uppercase tracking-wider">
-                    Quarterly Summit
-                  </span>
-                  <div className="text-[14px] font-bold mt-1">Clinical Validation & SaMD</div>
-                  <div className="text-[11.5px] text-slate-300">Bengaluru · 40 Curated Leaders</div>
+            <div className="rounded-[20px] overflow-hidden border border-border-subtle bg-white shadow-card group flex flex-col justify-between">
+              <div>
+                <div className="relative h-52 sm:h-56 w-full overflow-hidden bg-slate-900">
+                  <Image
+                    src={summitImg}
+                    alt="THC Clinical Validation Summit"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+                  <div className="absolute bottom-3 left-3.5 right-3.5 text-white">
+                    <span className="px-2.5 py-0.5 rounded-chip bg-cobalt text-[10.5px] font-bold uppercase tracking-wider inline-block">
+                      Quarterly Summit
+                    </span>
+                    <div className="text-[14.5px] font-bold mt-1 leading-snug">Clinical Validation & SaMD</div>
+                    <div className="text-[12px] text-slate-300">Bengaluru · 40 Curated Leaders</div>
+                  </div>
                 </div>
-              </div>
-              <div className="p-4.5 space-y-2">
-                <p className="text-[12.5px] text-slate leading-relaxed">
-                  Closed-door dinners bringing together founders building medical AI and diagnostic tools with heads of radiology and clinical research.
-                </p>
+                <div className="p-5 sm:p-6">
+                  <p className="text-[13px] sm:text-[13.5px] text-slate leading-relaxed">
+                    Closed-door dinners bringing together founders building medical AI and diagnostic tools with heads of radiology and clinical research.
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* Card 2: Roundtable */}
-            <div className="rounded-[20px] overflow-hidden border border-border-subtle bg-white shadow-card group">
-              <div className="relative h-56 w-full overflow-hidden bg-slate-900">
-                <Image
-                  src={roundtableImg}
-                  alt="Executive Hospital CIO Roundtable"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                <div className="absolute bottom-3 left-3 right-3 text-white">
-                  <span className="px-2 py-0.5 rounded bg-emerald-600 text-[10.5px] font-bold uppercase tracking-wider">
-                    Monthly Roundtable
-                  </span>
-                  <div className="text-[14px] font-bold mt-1">Hospital CIO & Operator Forum</div>
-                  <div className="text-[11.5px] text-slate-300">Mumbai · 25 Executive Seats</div>
+            <div className="rounded-[20px] overflow-hidden border border-border-subtle bg-white shadow-card group flex flex-col justify-between">
+              <div>
+                <div className="relative h-52 sm:h-56 w-full overflow-hidden bg-slate-900">
+                  <Image
+                    src={roundtableImg}
+                    alt="Executive Hospital CIO Roundtable"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+                  <div className="absolute bottom-3 left-3.5 right-3.5 text-white">
+                    <span className="px-2.5 py-0.5 rounded-chip bg-emerald-600 text-[10.5px] font-bold uppercase tracking-wider inline-block">
+                      Monthly Roundtable
+                    </span>
+                    <div className="text-[14.5px] font-bold mt-1 leading-snug">Hospital CIO & Operator Forum</div>
+                    <div className="text-[12px] text-slate-300">Mumbai · 25 Executive Seats</div>
+                  </div>
                 </div>
-              </div>
-              <div className="p-4.5 space-y-2">
-                <p className="text-[12.5px] text-slate leading-relaxed">
-                  Confidential, invite-only roundtable where tertiary hospital chiefs review pilot technology, integration hurdles, and hospital economics.
-                </p>
+                <div className="p-5 sm:p-6">
+                  <p className="text-[13px] sm:text-[13.5px] text-slate leading-relaxed">
+                    Confidential, invite-only roundtable where tertiary hospital chiefs review pilot technology, integration hurdles, and hospital economics.
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* Card 3: Mixer */}
-            <div className="rounded-[20px] overflow-hidden border border-border-subtle bg-white shadow-card group">
-              <div className="relative h-56 w-full overflow-hidden bg-slate-900">
-                <Image
-                  src={mixerImg}
-                  alt="THC Community Chapter Mixer"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                <div className="absolute bottom-3 left-3 right-3 text-white">
-                  <span className="px-2 py-0.5 rounded bg-cyan-600 text-[10.5px] font-bold uppercase tracking-wider">
-                    Bi-Weekly Mixer
-                  </span>
-                  <div className="text-[14px] font-bold mt-1">Healthtech Community Mixer</div>
-                  <div className="text-[11.5px] text-slate-300">8 Indian Metro Chapters</div>
+            <div className="rounded-[20px] overflow-hidden border border-border-subtle bg-white shadow-card group flex flex-col justify-between">
+              <div>
+                <div className="relative h-52 sm:h-56 w-full overflow-hidden bg-slate-900">
+                  <Image
+                    src={mixerImg}
+                    alt="THC Community Chapter Mixer"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+                  <div className="absolute bottom-3 left-3.5 right-3.5 text-white">
+                    <span className="px-2.5 py-0.5 rounded-chip bg-cyan-600 text-[10.5px] font-bold uppercase tracking-wider inline-block">
+                      Bi-Weekly Mixer
+                    </span>
+                    <div className="text-[14.5px] font-bold mt-1 leading-snug">Healthtech Community Mixer</div>
+                    <div className="text-[12px] text-slate-300">8 Indian Metro Chapters</div>
+                  </div>
                 </div>
-              </div>
-              <div className="p-4.5 space-y-2">
-                <p className="text-[12.5px] text-slate leading-relaxed">
-                  Lively, high-energy gatherings connecting engineers, physicians, product managers, and founders prototyping the next generation of care.
-                </p>
+                <div className="p-5 sm:p-6">
+                  <p className="text-[13px] sm:text-[13.5px] text-slate leading-relaxed">
+                    Lively, high-energy gatherings connecting engineers, physicians, product managers, and founders prototyping the next generation of care.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

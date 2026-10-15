@@ -155,8 +155,8 @@ export default function HeroLiveSection({ profiles, featuredEvent }: HeroLiveSec
         {/* Search Bar + 4 Popular Chips */}
         <div className="pt-0.5 space-y-3">
           <form onSubmit={handleSearchSubmit} className="relative flex items-center shadow-card rounded-chip group max-w-xl">
-            <div className="absolute left-3.5 sm:left-4.5 text-slate group-focus-within:text-ink transition-colors pointer-events-none">
-              <Search className="w-4 h-4 sm:w-4.5 sm:h-4.5" />
+            <div className="absolute left-3.5 sm:left-4 text-slate group-focus-within:text-ink transition-colors pointer-events-none">
+              <Search className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
             <input
               type="search"

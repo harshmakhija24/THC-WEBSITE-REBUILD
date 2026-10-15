@@ -43,8 +43,8 @@ export default function HeroSearch({ onSearchSubmit }: HeroSearchProps) {
     <div className="w-full max-w-xl space-y-3">
       {/* High-Tech Search Bar */}
       <form onSubmit={handleSubmit} className="relative flex items-center shadow-card rounded-chip group">
-        <div className="absolute left-4.5 text-slate-400 group-focus-within:text-cobalt transition-colors pointer-events-none">
-          <Search className="w-4.5 h-4.5" />
+        <div className="absolute left-4 text-slate-400 group-focus-within:text-cobalt transition-colors pointer-events-none">
+          <Search className="w-5 h-5" />
         </div>
         <input
           type="search"
