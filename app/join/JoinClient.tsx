@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import BackgroundPattern from "@/components/BackgroundPattern";
 import PulseLine from "@/components/PulseLine";
 import summitImg from "@/public/gathering-summit.jpg";
 import roundtableImg from "@/public/gathering-roundtable.jpg";
@@ -88,11 +87,39 @@ export default function JoinClient() {
       {/* SCROLL 1: THE INTAKE PORTAL & GATHERING ATMOSPHERE (Height: ~800px)       */}
       {/* ========================================================================= */}
       <section className="relative pt-6 pb-8 sm:pt-8 sm:pb-12 border-b border-line bg-white overflow-hidden">
-        {/* Lively Architectural Blueprint Background Lines */}
-        <BackgroundPattern
-          variant="tech-blueprint"
-          strokeColor="rgba(148, 163, 184, 0.28)"
-        />
+        {/* Dedicated Ambient Background for Join Hero — Clean, Subtle & Non-Intrusive */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden select-none" aria-hidden="true">
+          {/* Soft ambient radiant glows giving depth to WhatsApp and Gatherings sides */}
+          <div className="absolute -top-20 left-10 w-[500px] h-[360px] bg-emerald-100/35 rounded-full blur-3xl -z-10" />
+          <div className="absolute top-10 right-10 w-[550px] h-[400px] bg-blue-100/35 rounded-full blur-3xl -z-10" />
+
+          {/* Clean 1:1 true-square micro-grid with radial edge fade */}
+          <svg
+            className="w-full h-full object-cover"
+            xmlns="http://www.w3.org/2000/svg"
+            width="100%"
+            height="100%"
+            style={{
+              maskImage: "radial-gradient(ellipse 90% 80% at 50% 35%, black 40%, transparent 95%)",
+              WebkitMaskImage: "radial-gradient(ellipse 90% 80% at 50% 35%, black 40%, transparent 95%)",
+            }}
+          >
+            <defs>
+              <pattern id="join-grid-fine" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(148, 163, 184, 0.13)" strokeWidth="0.75" />
+              </pattern>
+              <pattern id="join-grid-major" width="120" height="120" patternUnits="userSpaceOnUse">
+                <rect width="120" height="120" fill="none" stroke="rgba(37, 99, 235, 0.08)" strokeWidth="1" />
+                <circle cx="0" cy="0" r="1.5" fill="rgba(37, 99, 235, 0.25)" />
+                <circle cx="120" cy="0" r="1.5" fill="rgba(37, 99, 235, 0.25)" />
+                <circle cx="0" cy="120" r="1.5" fill="rgba(37, 99, 235, 0.25)" />
+                <circle cx="120" cy="120" r="1.5" fill="rgba(37, 99, 235, 0.25)" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#join-grid-fine)" />
+            <rect width="100%" height="100%" fill="url(#join-grid-major)" />
+          </svg>
+        </div>
 
         <div className="max-w-container mx-auto px-4 md:px-6 relative z-10">
           {/* Hero Header Area */}
@@ -333,11 +360,34 @@ export default function JoinClient() {
       {/* SCROLL 2: PRICING COMPARISON, BULLETPROOF FAQ & FAST ENROLL (Height: ~850px) */}
       {/* ========================================================================= */}
       <section id="pricing" className="relative py-8 sm:py-12 bg-canvas-subtle border-b border-border-subtle overflow-hidden scroll-mt-16">
-        {/* Continuous Tech Blueprint Lines */}
-        <BackgroundPattern
-          variant="tech-blueprint"
-          strokeColor="rgba(148, 163, 184, 0.22)"
-        />
+        {/* Dedicated Subtle Ambient Background for Pricing & FAQ */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden select-none" aria-hidden="true">
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-blue-100/20 rounded-full blur-3xl -z-10" />
+
+          <svg
+            className="w-full h-full object-cover"
+            xmlns="http://www.w3.org/2000/svg"
+            width="100%"
+            height="100%"
+            style={{
+              maskImage: "radial-gradient(ellipse 90% 75% at 50% 25%, black 40%, transparent 95%)",
+              WebkitMaskImage: "radial-gradient(ellipse 90% 75% at 50% 25%, black 40%, transparent 95%)",
+            }}
+          >
+            <defs>
+              <pattern id="pricing-grid-fine" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(148, 163, 184, 0.10)" strokeWidth="0.75" />
+              </pattern>
+              <pattern id="pricing-grid-major" width="120" height="120" patternUnits="userSpaceOnUse">
+                <rect width="120" height="120" fill="none" stroke="rgba(37, 99, 235, 0.06)" strokeWidth="1" />
+                <circle cx="0" cy="0" r="1.5" fill="rgba(37, 99, 235, 0.2)" />
+                <circle cx="120" cy="0" r="1.5" fill="rgba(37, 99, 235, 0.2)" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#pricing-grid-fine)" />
+            <rect width="100%" height="100%" fill="url(#pricing-grid-major)" />
+          </svg>
+        </div>
 
         <div className="max-w-container mx-auto px-4 md:px-6 relative z-10">
           {/* Section Header */}
