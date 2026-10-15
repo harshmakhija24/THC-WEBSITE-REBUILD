@@ -4,31 +4,17 @@ type BackgroundPatternProps = {
   variant: "tech-blueprint" | "perspective" | "network-mesh" | "topography-flow" | "cyber-rays";
   className?: string;
   strokeColor?: string;
-  accentColor?: "cobalt" | "emerald" | "cyan";
 };
 
 export default function BackgroundPattern({
   variant,
   className = "",
   strokeColor,
-  accentColor = "cobalt",
 }: BackgroundPatternProps) {
-  // 1. Tech Blueprint Grid (Hero & Join): Clean architectural grid, visible telemetry arcs, and ambient glow
+  // 1. Tech Blueprint Grid (Hero): Clean architectural grid, visible telemetry arcs, and ambient glow
   if (variant === "tech-blueprint") {
-    const stroke = strokeColor || "rgba(148, 163, 184, 0.28)";
-    const majorStroke =
-      accentColor === "emerald"
-        ? "rgba(16, 185, 129, 0.25)"
-        : accentColor === "cyan"
-        ? "rgba(6, 182, 212, 0.25)"
-        : "rgba(37, 99, 235, 0.22)";
-    const dotColor =
-      accentColor === "emerald"
-        ? "rgba(16, 185, 129, 0.5)"
-        : accentColor === "cyan"
-        ? "rgba(6, 182, 212, 0.5)"
-        : "rgba(37, 99, 235, 0.5)";
-
+    const stroke = strokeColor || "rgba(148, 163, 184, 0.25)";
+    const majorStroke = "rgba(37, 99, 235, 0.22)";
     return (
       <div
         className={`absolute inset-0 pointer-events-none overflow-hidden select-none ${className}`}
@@ -48,7 +34,7 @@ export default function BackgroundPattern({
                 fill="none"
                 stroke={stroke}
                 strokeWidth="0.8"
-                strokeOpacity="0.75"
+                strokeOpacity="0.7"
               />
             </pattern>
 
@@ -56,34 +42,22 @@ export default function BackgroundPattern({
             <pattern id="bp-grid-major" width="120" height="120" patternUnits="userSpaceOnUse">
               <rect width="120" height="120" fill="none" stroke={majorStroke} strokeWidth="1.2" />
               {/* Clean corner micro-dots at intersections */}
-              <circle cx="0" cy="0" r="2" fill={dotColor} />
-              <circle cx="120" cy="0" r="2" fill={dotColor} />
-              <circle cx="0" cy="120" r="2" fill={dotColor} />
-              <circle cx="120" cy="120" r="2" fill={dotColor} />
+              <circle cx="0" cy="0" r="2" fill="rgba(37, 99, 235, 0.45)" />
+              <circle cx="120" cy="0" r="2" fill="rgba(37, 99, 235, 0.45)" />
+              <circle cx="0" cy="120" r="2" fill="rgba(37, 99, 235, 0.45)" />
+              <circle cx="120" cy="120" r="2" fill="rgba(37, 99, 235, 0.45)" />
             </pattern>
 
-            {/* Subtle radial ambient spotlight */}
-            <radialGradient id={`hero-spotlight-${accentColor}`} cx="65%" cy="38%" r="65%">
-              <stop
-                offset="0%"
-                stopColor={accentColor === "emerald" ? "#10B981" : "#2563EB"}
-                stopOpacity="0.08"
-              />
-              <stop
-                offset="50%"
-                stopColor={accentColor === "emerald" ? "#059669" : "#06B6D4"}
-                stopOpacity="0.03"
-              />
-              <stop
-                offset="100%"
-                stopColor={accentColor === "emerald" ? "#10B981" : "#2563EB"}
-                stopOpacity="0"
-              />
+            {/* Subtle radial ambient spotlight behind hero */}
+            <radialGradient id="hero-spotlight" cx="65%" cy="38%" r="65%">
+              <stop offset="0%" stopColor="#2563EB" stopOpacity="0.08" />
+              <stop offset="50%" stopColor="#06B6D4" stopOpacity="0.03" />
+              <stop offset="100%" stopColor="#2563EB" stopOpacity="0" />
             </radialGradient>
           </defs>
 
           {/* Ambient Spotlight */}
-          <rect width="100%" height="100%" fill={`url(#hero-spotlight-${accentColor})`} />
+          <rect width="100%" height="100%" fill="url(#hero-spotlight)" />
 
           {/* Minor Grid Layer */}
           <rect width="100%" height="100%" fill="url(#bp-grid-minor)" />
@@ -96,7 +70,7 @@ export default function BackgroundPattern({
           <line x1="100%" y1="0" x2="0" y2="100%" stroke={majorStroke} strokeWidth="1" strokeDasharray="4 8" strokeOpacity="0.4" />
 
           {/* Architectural Telemetry Arcs */}
-          <g stroke={majorStroke} strokeWidth="1.2" fill="none" strokeDasharray="4 6">
+          <g stroke="rgba(37, 99, 235, 0.20)" strokeWidth="1.2" fill="none" strokeDasharray="4 6">
             <circle cx="74%" cy="40%" r="160" />
             <circle cx="74%" cy="40%" r="320" />
             <circle cx="74%" cy="40%" r="480" />
@@ -167,15 +141,16 @@ export default function BackgroundPattern({
     );
   }
 
-  // 3. Network Mesh (Directory): Interconnected node lattice with architectural blueprint grid
+  // 3. Network Mesh (Directory): Interconnected node lattice representing India's healthtech ecosystem
   if (variant === "network-mesh") {
-    const stroke = strokeColor || "rgba(148, 163, 184, 0.22)";
-    const gridStroke = "rgba(148, 163, 184, 0.18)";
-    const majorStroke = "rgba(37, 99, 235, 0.16)";
-
+    const stroke = strokeColor || "rgba(148, 163, 184, 0.20)";
     return (
       <div
         className={`absolute inset-0 pointer-events-none overflow-hidden select-none ${className}`}
+        style={{
+          maskImage: "radial-gradient(ellipse 90% 85% at 50% 45%, black 40%, transparent 95%)",
+          WebkitMaskImage: "radial-gradient(ellipse 90% 85% at 50% 45%, black 40%, transparent 95%)",
+        }}
         aria-hidden="true"
       >
         <svg
@@ -185,18 +160,6 @@ export default function BackgroundPattern({
           xmlns="http://www.w3.org/2000/svg"
         >
           <defs>
-            {/* Minor grid 40px */}
-            <pattern id="net-grid-minor" width="40" height="40" patternUnits="userSpaceOnUse">
-              <path d="M 40 0 L 0 0 0 40" fill="none" stroke={gridStroke} strokeWidth="0.8" />
-            </pattern>
-
-            {/* Major grid 120px */}
-            <pattern id="net-grid-major" width="120" height="120" patternUnits="userSpaceOnUse">
-              <rect width="120" height="120" fill="none" stroke={majorStroke} strokeWidth="1" />
-              <circle cx="0" cy="0" r="1.5" fill="rgba(37, 99, 235, 0.4)" />
-              <circle cx="120" cy="0" r="1.5" fill="rgba(37, 99, 235, 0.4)" />
-            </pattern>
-
             {/* Hexagonal Isometric Mesh */}
             <pattern id="hex-mesh" width="120" height="104" patternUnits="userSpaceOnUse">
               <path
@@ -212,15 +175,11 @@ export default function BackgroundPattern({
             </pattern>
           </defs>
 
-          {/* Blueprint Grid Layers */}
-          <rect width="100%" height="100%" fill="url(#net-grid-minor)" />
-          <rect width="100%" height="100%" fill="url(#net-grid-major)" />
-
           {/* Hex Mesh Pattern Fill */}
-          <rect width="100%" height="100%" fill="url(#hex-mesh)" opacity="0.85" />
+          <rect width="100%" height="100%" fill="url(#hex-mesh)" />
 
           {/* Large Constellation Network Lines connecting across the canvas */}
-          <g stroke={stroke} strokeWidth="1.2" fill="none">
+          <g stroke={stroke} strokeWidth="1" fill="none">
             <line x1="120" y1="180" x2="420" y2="280" />
             <line x1="420" y1="280" x2="780" y2="160" />
             <line x1="780" y1="160" x2="1140" y2="310" />
@@ -248,8 +207,8 @@ export default function BackgroundPattern({
             [1280, 480, "#2563EB"],
           ].map(([x, y, color], i) => (
             <g key={`hub-${i}`}>
-              <circle cx={x} cy={y} r="6" fill={color as string} fillOpacity="0.15" />
-              <circle cx={x} cy={y} r="2.5" fill={color as string} fillOpacity="0.7" />
+              <circle cx={x} cy={y} r="6" fill={color as string} fillOpacity="0.12" />
+              <circle cx={x} cy={y} r="2.5" fill={color as string} fillOpacity="0.6" />
             </g>
           ))}
         </svg>
@@ -257,15 +216,16 @@ export default function BackgroundPattern({
     );
   }
 
-  // 4. Topography / Flow Trajectory (Audience & Steps): Subtle architectural contour waves + blueprint grid
+  // 4. Topography / Flow Trajectory (Audience & Steps): Subtle architectural contour waves
   if (variant === "topography-flow") {
-    const stroke = strokeColor || "rgba(148, 163, 184, 0.22)";
-    const gridStroke = "rgba(148, 163, 184, 0.18)";
-    const majorStroke = "rgba(37, 99, 235, 0.16)";
-
+    const stroke = strokeColor || "rgba(148, 163, 184, 0.20)";
     return (
       <div
         className={`absolute inset-0 pointer-events-none overflow-hidden select-none ${className}`}
+        style={{
+          maskImage: "radial-gradient(ellipse 90% 80% at 50% 50%, black 40%, transparent 95%)",
+          WebkitMaskImage: "radial-gradient(ellipse 90% 80% at 50% 50%, black 40%, transparent 95%)",
+        }}
         aria-hidden="true"
       >
         <svg
@@ -274,21 +234,6 @@ export default function BackgroundPattern({
           preserveAspectRatio="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <defs>
-            <pattern id="topo-grid-minor" width="40" height="40" patternUnits="userSpaceOnUse">
-              <path d="M 40 0 L 0 0 0 40" fill="none" stroke={gridStroke} strokeWidth="0.8" />
-            </pattern>
-            <pattern id="topo-grid-major" width="120" height="120" patternUnits="userSpaceOnUse">
-              <rect width="120" height="120" fill="none" stroke={majorStroke} strokeWidth="1" />
-              <circle cx="0" cy="0" r="1.5" fill="rgba(37, 99, 235, 0.4)" />
-              <circle cx="120" cy="0" r="1.5" fill="rgba(37, 99, 235, 0.4)" />
-            </pattern>
-          </defs>
-
-          {/* Continuous Blueprint Grid Layer */}
-          <rect width="100%" height="100%" fill="url(#topo-grid-minor)" />
-          <rect width="100%" height="100%" fill="url(#topo-grid-major)" />
-
           <g stroke={stroke} strokeWidth="1.2" fill="none">
             {/* Smooth architectural contour curves */}
             <path d="M -100 120 C 300 240, 800 60, 1540 180" />

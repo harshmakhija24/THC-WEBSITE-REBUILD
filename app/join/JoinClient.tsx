@@ -92,7 +92,6 @@ export default function JoinClient() {
         <BackgroundPattern
           variant="tech-blueprint"
           strokeColor="rgba(148, 163, 184, 0.28)"
-          accentColor="emerald"
         />
 
         <div className="max-w-container mx-auto px-4 md:px-6 relative z-10">
@@ -338,7 +337,6 @@ export default function JoinClient() {
         <BackgroundPattern
           variant="tech-blueprint"
           strokeColor="rgba(148, 163, 184, 0.22)"
-          accentColor="cobalt"
         />
 
         <div className="max-w-container mx-auto px-4 md:px-6 relative z-10">

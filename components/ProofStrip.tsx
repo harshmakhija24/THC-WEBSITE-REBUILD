@@ -1,7 +1,6 @@
 import React from "react";
 import type { Stat, Partner } from "@/lib/types";
 import { CheckCircle2 } from "lucide-react";
-import BackgroundPattern from "./BackgroundPattern";
 
 type ProofStripProps = {
   stats: Stat[];
@@ -12,9 +11,8 @@ export default function ProofStrip({ stats, partners }: ProofStripProps) {
   const marqueePartners = [...partners, ...partners, ...partners];
 
   return (
-    <section className="border-y border-border-subtle bg-canvas-subtle py-8 sm:py-12 overflow-hidden relative">
-      <BackgroundPattern variant="tech-blueprint" strokeColor="rgba(148, 163, 184, 0.18)" accentColor="cyan" />
-      <div className="max-w-container mx-auto px-4 md:px-6 mb-6 sm:mb-8 relative z-10">
+    <section className="border-y border-border-subtle bg-canvas-subtle py-8 sm:py-12 overflow-hidden">
+      <div className="max-w-container mx-auto px-4 md:px-6 mb-6 sm:mb-8">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4 mb-5 sm:mb-6">
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
             <p className="text-[11.5px] sm:text-[12px] uppercase tracking-wider text-slate font-bold">
