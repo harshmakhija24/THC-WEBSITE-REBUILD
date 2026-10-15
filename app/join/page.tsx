@@ -2,17 +2,13 @@ import Header from "@/components/Header";
 import THCLogo from "@/components/THCLogo";
 import Link from "next/link";
 import JoinClient from "./JoinClient";
-import { getTestimonials, getFaqs } from "@/lib/content";
-
 export const metadata = {
   title: "Join The Healthtech Collective — Community & Membership Pathways",
   description:
     "Join India's most curated healthtech ecosystem. Free WhatsApp community for builders and clinicians, ASCENT founder cohorts (₹49,999), and executive Catalyst circles.",
 };
 
-export default async function JoinPage() {
-  const testimonials = await getTestimonials();
-  const faqs = await getFaqs();
+export default function JoinPage() {
 
   return (
     <div className="min-h-screen bg-canvas text-text-primary flex flex-col justify-between">
@@ -21,7 +17,7 @@ export default async function JoinPage() {
 
       {/* 2. Main Join Community Client Page */}
       <main className="flex-1">
-        <JoinClient testimonials={testimonials} faqs={faqs} />
+        <JoinClient />
       </main>
 
       {/* 3. Universal THC Footer */}

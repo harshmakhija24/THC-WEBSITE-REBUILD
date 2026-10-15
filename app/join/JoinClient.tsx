@@ -22,18 +22,13 @@ import {
   Award,
   Lock,
 } from "lucide-react";
-import type { Testimonial, FAQ } from "@/lib/types";
-
-type JoinClientProps = {
-  testimonials: Testimonial[];
-  faqs: FAQ[];
-};
 
 type PhotoKey = "summit" | "roundtable" | "mixer";
 
-export default function JoinClient(_props: JoinClientProps) {
+export default function JoinClient() {
   const [activePhoto, setActivePhoto] = useState<PhotoKey>("summit");
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
+  const [showAllPerks, setShowAllPerks] = useState<boolean>(false);
 
   const toggleFaq = (index: number) => {
     setOpenFaqIndex(openFaqIndex === index ? null : index);
@@ -146,12 +141,13 @@ export default function JoinClient(_props: JoinClientProps) {
 
           {/* Dual-Pane Bento Grid: Left Free WhatsApp Intake | Right Gatherings Showcase */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 mt-6 sm:mt-8 items-stretch">
-            {/* Left Pane: WhatsApp Community Pass (Featured Free Intake) */}
+            {/* Left Pane: WhatsApp Community Pass (Decluttered & Clean) */}
             <div className="lg:col-span-6 p-5 sm:p-6 rounded-[22px] border-2 border-emerald-500/35 bg-white shadow-elevated relative overflow-hidden flex flex-col justify-between group">
               {/* Subtle ambient radiant glow */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-100/40 rounded-full blur-3xl pointer-events-none -mr-16 -mt-16" />
 
               <div className="relative z-10 space-y-3.5">
+                {/* Clean Top Status Row */}
                 <div className="flex items-center justify-between flex-wrap gap-2">
                   <span className="px-2.5 py-1 rounded-chip bg-emerald-100 text-emerald-800 text-[10.5px] font-extrabold uppercase tracking-wider inline-flex items-center gap-1.5">
                     <Flame className="w-3.5 h-3.5 text-emerald-600" />
@@ -162,44 +158,65 @@ export default function JoinClient(_props: JoinClientProps) {
                   </span>
                 </div>
 
-                <div>
+                {/* Price & Headline */}
+                <div className="space-y-1">
                   <div className="flex items-baseline gap-2">
-                    <span className="text-[28px] sm:text-[34px] font-sans font-extrabold text-obsidian tracking-tight">₹0</span>
-                    <span className="text-[12.5px] font-medium text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                    <span className="text-[30px] sm:text-[36px] font-sans font-extrabold text-obsidian tracking-tight">₹0</span>
+                    <span className="text-[12px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
                       Free Instant Access
                     </span>
                   </div>
-                  <h2 className="text-[20px] sm:text-[23px] font-sans font-bold text-obsidian tracking-tight mt-1">
+                  <h2 className="text-[20px] sm:text-[23px] font-sans font-bold text-obsidian tracking-tight">
                     The THC WhatsApp Community
                   </h2>
-                  <p className="text-[12.5px] sm:text-[13.5px] text-slate mt-1 leading-relaxed">
-                    Skip long admission cycles. Step directly into India&apos;s largest curated forum for healthtech builders, practicing doctors, hospital executives, and angel investors. Zero spam, 100% signal.
+                  <p className="text-[12.5px] sm:text-[13.5px] text-slate leading-relaxed">
+                    India&apos;s highest-signal daily exchange for healthtech builders, practicing doctors, hospital executives, and angel investors. Zero spam, 100% signal.
                   </p>
                 </div>
 
-                {/* 4 Feature Points */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1 text-[12px] sm:text-[12.5px] text-text-primary">
-                  <div className="flex items-start gap-2">
+                {/* Clean Highlights + Read More Expander */}
+                <div className="space-y-2 pt-1 text-[12.5px] text-text-primary">
+                  <div className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                    <span><strong>Daily High-Signal Queries:</strong> Fast answers on CDSCO, PACS, and trials.</span>
+                    <span><strong>Daily High-Signal Queries:</strong> Fast peer answers on CDSCO, PACS & trials</span>
                   </div>
-                  <div className="flex items-start gap-2">
+                  <div className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                    <span><strong>Weekly Virtual AMAs:</strong> Live audio rooms with Series A/B founders & clinicians.</span>
+                    <span><strong>Weekly Virtual AMAs:</strong> Live audio rooms with hospital CIOs & VCs</span>
                   </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                    <span><strong>City Chapter Alerts:</strong> First access to offline meetups in 8 metros.</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                    <span><strong>Advisory Matchmaking:</strong> Connect directly with practicing clinical advisors.</span>
-                  </div>
+
+                  {/* Expandable Read-More Perks */}
+                  {showAllPerks && (
+                    <div className="space-y-2 pt-1 border-t border-emerald-100/70 mt-1.5 animate-fadeIn">
+                      <div className="flex items-start gap-2.5">
+                        <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                        <span><strong>City Chapter Alerts:</strong> First access to offline meetups in 8 metros</span>
+                      </div>
+                      <div className="flex items-start gap-2.5">
+                        <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                        <span><strong>Advisory Matchmaking:</strong> Connect directly with practicing clinical advisors</span>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Read More / Show Less Toggle Button */}
+                  <button
+                    type="button"
+                    onClick={() => setShowAllPerks(!showAllPerks)}
+                    className="inline-flex items-center gap-1 text-[12px] font-bold text-emerald-700 hover:text-emerald-800 transition-colors pt-1 cursor-pointer focus:outline-none"
+                  >
+                    <span>{showAllPerks ? "Show less" : "Read more perks (+2 channels)"}</span>
+                    <ChevronDown
+                      className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                        showAllPerks ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
                 </div>
               </div>
 
               {/* Action Button */}
-              <div className="relative z-10 pt-4 mt-2 border-t border-emerald-100 flex flex-col sm:flex-row items-center gap-3">
+              <div className="relative z-10 pt-4 mt-3 border-t border-emerald-100 flex flex-col sm:flex-row items-center gap-3">
                 <a
                   href="https://chat.whatsapp.com/invite/thc-healthtech"
                   target="_blank"
@@ -209,8 +226,8 @@ export default function JoinClient(_props: JoinClientProps) {
                   <MessageCircle className="w-4.5 h-4.5 fill-current" />
                   <span>Join WhatsApp Community (Free)</span>
                 </a>
-                <span className="text-[11px] text-slate text-center sm:text-left">
-                  Instant invitation link · No credit card required
+                <span className="text-[11px] text-slate text-center sm:text-left shrink-0">
+                  Instant invite · Zero spam · No card needed
                 </span>
               </div>
             </div>
